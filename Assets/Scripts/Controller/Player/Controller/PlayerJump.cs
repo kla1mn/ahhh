@@ -8,15 +8,15 @@ using UnityEditor;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField, HideInInspector] private float jumpingVelocity = 13f;
-    [SerializeField, HideInInspector] private float longerJumpingCoeffieicent = .9f;
+    [SerializeField] private float jumpingVelocity = 13f;
+    [SerializeField] private float longerJumpingCoeffieicent = .9f;
 
-    [SerializeField, HideInInspector] private GameObject jumpParcticle;
-    [SerializeField, HideInInspector] private Transform jumpParent;
+    [SerializeField] private GameObject jumpParcticle;
+    [SerializeField] private Transform jumpParent;
 
-    [SerializeField, HideInInspector] private ParticleSystem jumpTrail;
+    [SerializeField] private ParticleSystem jumpTrail;
 
-    [SerializeField, HideInInspector] private AudioSource jumpSource;
+    [SerializeField] private AudioSource jumpSource;
 
     private Rigidbody2D rigidBody;
 

@@ -98,7 +98,6 @@ public class PlayerCollisions : MonoBehaviour
             if (rb.velocity.y < stunningVelocityY)
                 StartGroundStunning();
 
-            Instantiate(dustParticle, particleParent).transform.parent = null;
             landingAudio.Play();
             wasLanding = true;
         }

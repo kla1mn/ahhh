@@ -48,8 +48,7 @@ public class PlayerFlip : MonoBehaviour
 
             RotateTransform(playerAvatar);
 
-            if (collisions.IsGrounded)  
-                flipParticle.Play();
+          
             Invoke(nameof(StopFlip), FlipDuration);
         }
 

@@ -32,10 +32,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     private PlayerState state;
     private BloodSpawner spawner;
 
-    [SerializeField] private UPReffects effects;
-    [SerializeField] private CineMashineEffects cameraEffects;
-
-    [SerializeField] private Animator deathAnimator;
     [Space]
     [Header("Audio")]
     [SerializeField] private AudioSource[] damageSound;
@@ -86,7 +82,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
             state.HeartingDisable();
             StartRepulse();
 
-            effects.StartDepthOfFieldAnimation(true);
             spawner.SpawnAllBloodPrefabs();
             AudioPlay();
 
@@ -129,9 +124,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
 
         Time.timeScale = .8f;
 
-        deathAnimator.Play("Death");
-        cameraEffects.DesiredFOV = cameraEffects.DeathOrCampFOV;
-
         deathSound.Play();
     }
 
@@ -142,10 +134,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
         else if (IsHearting)
             StopHearting();
 
-        if (CurrentHealth < MaxHealth/5)
-            effects.EnableGrain();
-        else
-            effects.DisableGrain();
     }
 
     public void StopHearting()
