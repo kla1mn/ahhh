@@ -8,7 +8,6 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
 
     [Header("Audio")]
     [SerializeField] private AudioSource fistAttackAudio;
-    [SerializeField] private AudioClip[] attackSounds;  
 
     [Header("Variables")]
     [SerializeField] private float damage;
@@ -64,7 +63,6 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
             comboWaitTimer = 0;
 
             playerState.AttackDisableActions();
-            // PlayRandomAttackSound();
         }
     }
 
@@ -130,21 +128,5 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     public void DoJerk(float power)
     {
         throw new NotImplementedException();
-    }
-    
-    private void PlayRandomAttackSound()
-    {
-        var playChance = 0.7f; // Например, 70% шанс проиграть звук
-        var randomValue = UnityEngine.Random.value;
-
-        if (randomValue < playChance)
-        {
-            if (attackSounds != null && attackSounds.Length > 0 && fistAttackAudio != null)
-            {
-                var randomIndex = UnityEngine.Random.Range(0, attackSounds.Length);
-                var randomClip = attackSounds[randomIndex];
-                fistAttackAudio.PlayOneShot(randomClip);
-            }
-        }
     }
 }
