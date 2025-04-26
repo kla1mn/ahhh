@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8248013544876291339}
   - component: {fileID: 8248013544876291340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u043B\u0430\u043C\u043F\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8248013545724723749}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u0421\u0432\u0435\u0442"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8248013545746213496}
   - component: {fileID: 8248013545746213497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u043B\u0430\u043C\u043F\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 8248013545970507280}
   - component: {fileID: 8248013545970507281}
   - component: {fileID: 8248013545970507295}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u0412\u0438\u043B\u043A\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 8248013546054804869}
   - component: {fileID: 8248013546054804870}
   - component: {fileID: 8248013546054804868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u0414\u044B\u0440\u043A\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8248013546643900699}
   - component: {fileID: 8248013546643900700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u043B\u0430\u043C\u043F\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

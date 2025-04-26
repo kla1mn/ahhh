@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4416826757754200}
   - component: {fileID: 198341621129356860}
   - component: {fileID: 199044442277482184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SmokeTrail 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
