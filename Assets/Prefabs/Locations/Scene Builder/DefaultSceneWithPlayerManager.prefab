@@ -80,7 +80,15 @@ MonoBehaviour:
     parentHierarchy: '##INTERACTABLE##'
   - folderName: '#NIPS#'
     parentHierarchy: '##INTERACTABLE##'
-  sceneObjects: []
+  sceneObjects:
+  - name: PLAYER
+    prefab: {fileID: 9033176761308213836, guid: 6f68ce4d28659e14698909ab28348ff7, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    parentHierarchy: '##PLAYER##'
+  - name: LIGHT
+    prefab: {fileID: 8256376968902960492, guid: 889f607220e5a904ba553d537e95d4a5, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    parentHierarchy: '##PLAYER##'
 --- !u!114 &2958371035959675247
 MonoBehaviour:
   m_ObjectHideFlags: 0
