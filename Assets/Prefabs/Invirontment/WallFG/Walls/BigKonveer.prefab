@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 5893767806132967169}
   - component: {fileID: 8656398315240403479}
   - component: {fileID: 8857940595325218283}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: BigKonveer
   m_TagString: FG
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   - {x: 8.431763, y: -5.8785706, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 35546
+  m_InstanceId: 198844
   m_LocalBounds:
     m_Center: {x: -2.6589355, y: 3.1296997, z: 0}
     m_Extent: {x: 11.090698, y: 9.00827, z: 0}
@@ -514,7 +514,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
       propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
@@ -736,7 +744,15 @@ PrefabInstance:
       value: 'Konveer Right  '
       objectReference: {fileID: 0}
     - target: {fileID: 705947405287478647, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 705947405287478647, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
       propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 705947405835593623, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 705947405835593623, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
@@ -822,7 +838,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
       propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
@@ -848,7 +872,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 3757435588851383758}
     m_Modifications:
     - target: {fileID: 7787002619398363041, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787002619398363041, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
       propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787002619946476865, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787002619946476865, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}

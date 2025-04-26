@@ -1703,7 +1703,7 @@ GameObject:
   - component: {fileID: 6403692560765344137}
   - component: {fileID: 6403692560765344150}
   - component: {fileID: 2128589863543849293}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Ground
   m_TagString: FG
   m_Icon: {fileID: 0}
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   - {x: 100.85402, y: -5.4833317, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 34830
+  m_InstanceId: 198128
   m_LocalBounds:
     m_Center: {x: 46.29087, y: -1.7109318, z: 0}
     m_Extent: {x: 54.56315, y: 3.7724, z: 0}

@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8295611870952050781}
   m_Layer: 6
   m_Name: BigBox
-  m_TagString: Untagged
+  m_TagString: FG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
