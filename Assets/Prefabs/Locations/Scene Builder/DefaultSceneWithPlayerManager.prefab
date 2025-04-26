@@ -50,17 +50,11 @@ MonoBehaviour:
     parentHierarchy: 
   - folderName: '##STATIC##'
     parentHierarchy: 
-  - folderName: '#NATURE PLATFORMS#'
-    parentHierarchy: '##STATIC##'
-  - folderName: '#NATURE WALLS#'
-    parentHierarchy: '##STATIC##'
   - folderName: '#BACKGROUND#'
     parentHierarchy: '##STATIC##'
-  - folderName: '##FOREGROUND##'
+  - folderName: '#FOREGROUND#'
     parentHierarchy: '##STATIC##'
   - folderName: '#MIDDLE BG#'
-    parentHierarchy: '##STATIC##'
-  - folderName: '#HOUSES#'
     parentHierarchy: '##STATIC##'
   - folderName: '#ITEM PLATFORMS#'
     parentHierarchy: '##STATIC##'
@@ -70,16 +64,8 @@ MonoBehaviour:
     parentHierarchy: 
   - folderName: '#LIGHT#'
     parentHierarchy: '##DINAMIC##'
-  - folderName: '#GRASS#'
-    parentHierarchy: '##DINAMIC##'
-  - folderName: '#STONES#'
-    parentHierarchy: '##DINAMIC##'
-  - folderName: '#TREE#'
-    parentHierarchy: '##DINAMIC##'
   - folderName: '#ITEMS#'
     parentHierarchy: '##DINAMIC##'
-  - folderName: '##DIALOGUE##'
-    parentHierarchy: 
   - folderName: '##AUDIO##'
     parentHierarchy: 
   - folderName: '##QUESTS##'
@@ -88,9 +74,7 @@ MonoBehaviour:
     parentHierarchy: 
   - folderName: '#ENEMY#'
     parentHierarchy: '##INTERACTABLE##'
-  - folderName: '#NATURE DESTR_OBJ#'
-    parentHierarchy: '##INTERACTABLE##'
-  - folderName: '#ITEM DESTR_OBJ#'
+  - folderName: '#DESTR_OBJ#'
     parentHierarchy: '##INTERACTABLE##'
   - folderName: '#ITEMS#'
     parentHierarchy: '##INTERACTABLE##'
@@ -110,35 +94,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagHierarchyMappings:
-  - tag: Enemy
-    targetFolderPath: '##INTERACTABLE##/#ENEMY#'
-  - tag: Quest
-    targetFolderPath: '##QUESTS##'
-  - tag: Dialogue
-    targetFolderPath: '##DIALOGUE##'
-  - tag: Nature Platform
-    targetFolderPath: '##STATIC##/#NATURE PLATFORMS#'
-  - tag: Nature Wall
-    targetFolderPath: '##STATIC##/#NATURE WALLS#'
-  - tag: Item Platform
+  - tag: Player
+    targetFolderPath: '##PLAYER##'
+  - tag: Static
+    targetFolderPath: '##STATIC##'
+  - tag: BG
+    targetFolderPath: '##STATIC##/#BACKGROUND#'
+  - tag: FG
+    targetFolderPath: '##STATIC##/#FOREGROUND#'
+  - tag: MiddleBG
+    targetFolderPath: '##STATIC##/#MIDDLE BG#'
+  - tag: ItemPlatform
     targetFolderPath: '##STATIC##/#ITEM PLATFORMS#'
-  - tag: Item Walls
-    targetFolderPath: '##STATIC##/#ITEM WALLS#'
+  - tag: Dinamic
+    targetFolderPath: '##DINAMIC##'
   - tag: Light
     targetFolderPath: '##DINAMIC##/#LIGHT#'
-  - tag: Grass
-    targetFolderPath: '##DINAMIC##/#GRASS#'
-  - tag: Stones
-    targetFolderPath: '##DINAMIC##/#STONES#'
-  - tag: Tree
-    targetFolderPath: '##DINAMIC##/#TREE#'
   - tag: Items
     targetFolderPath: '##DINAMIC##/#ITEMS#'
-  - tag: Midle BG
-    targetFolderPath: '##STATIC##/#MIDDLE BG#'
-  - tag: DestrNature
-    targetFolderPath: '##INTERACTABLE##/#NATURE DESTR_OBJ#'
-  - tag: DestrItems
-    targetFolderPath: '##INTERACTABLE##/#ITEM DESTR_OBJ#'
-  - tag: FG
-    targetFolderPath: '##STATIC##/##FOREGROUND##'
+  - tag: Enemy
+    targetFolderPath: '##INTERACTABLE##/#ENEMY#'
+  - tag: Auido
+    targetFolderPath: '##AUDIO##'
+  - tag: Quest
+    targetFolderPath: '##QUESTS##'
+  - tag: Interactable
+    targetFolderPath: '##INTERACTABLE##'
+  - tag: Enemy
+    targetFolderPath: '##INTERACTABLE##/#ENEMY#'
+  - tag: DestrObj
+    targetFolderPath: '##INTERACTABLE##/#DESTR_OBJ#'
+  - tag: Items
+    targetFolderPath: '##INTERACTABLE##/#ITEMS#'
+  - tag: Nips
+    targetFolderPath: '##INTERACTABLE##/#NIPS#'
