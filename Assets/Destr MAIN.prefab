@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4192582796749925855}
   m_Layer: 0
   m_Name: Destr MAIN
-  m_TagString: DestrNature
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
