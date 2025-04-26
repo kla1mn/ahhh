@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:CivilStrife/Assets/Scripts/Player/AttackSystem/PlayerAttackSistem.cs.meta
+guid: c7481e9639a79a042bae8e2bb8560d7e
+========
+guid: b67b286b9c80b3a4ea75d4ea85ecd59e
+>>>>>>>> PlayerHealth:CivilStrife/Assets/Scripts/NewEnemy1/Enemy Types/SimpleEnemy.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

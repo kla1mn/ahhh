@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:CivilStrife/Assets/Scripts/NewEnemy1/Interfaces/IDamageable.cs.meta
+guid: bae1e0a29403341459ad9ed0ceef6c22
+========
+guid: 16de07b4e29df5b4c94811db263d5272
+>>>>>>>> PlayerHealth:CivilStrife/Assets/Scripts/NewEnemy1/Interfaces/IEnemyMoveable.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
