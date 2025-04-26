@@ -3187,7 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09122b8066766294ea732eac24710d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingVelocity: 23.7
+  jumpingVelocity: 13.7
   longerJumpingCoeffieicent: 0.9
   jumpParcticle: {fileID: 8961858063503482504, guid: ef63c4aa13c6d7d44bd87be414c7c980, type: 3}
   jumpParent: {fileID: 7092037981581528131}
@@ -10994,7 +10994,7 @@ Rigidbody2D:
   m_Mass: 80
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 1b23ec046441e594099b7b1bbcb8db19, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -19853,20 +19853,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9099808
+      value: -1.9025574
       objectReference: {fileID: 0}
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89111805
+      value: 0.34967804
       objectReference: {fileID: 0}
     - target: {fileID: 4388297117307267025, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_Name
       value: Player Camera System
       objectReference: {fileID: 0}
+    - target: {fileID: 6054234660502817399, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
+      propertyPath: field of view
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 7762799195063303849, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 3174110329915384905}
+    - target: {fileID: 7762799195063303849, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 7771477886924451284, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
