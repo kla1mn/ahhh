@@ -1527,7 +1527,7 @@ MonoBehaviour:
   damage: 12
   hertableObjects:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 32896
   isStrong: 0
   playerAttackSistem: {fileID: 6323326365425036037}
   state: {fileID: 7479521366999120419}
@@ -10905,7 +10905,7 @@ GameObject:
   - component: {fileID: 7614503939596601052}
   - component: {fileID: 8444792729494501952}
   - component: {fileID: 3693365221711288715}
-  m_Layer: 7
+  m_Layer: 20
   m_Name: PlayerCollider
   m_TagString: PlayerRb
   m_Icon: {fileID: 0}

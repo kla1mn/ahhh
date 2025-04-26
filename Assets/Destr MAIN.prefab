@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4192582796749925855}
   m_Layer: 0
-  m_Name: Stone
+  m_Name: Destr MAIN
   m_TagString: DestrNature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,6 +82,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -160,6 +163,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 94ba6d1f390e8224c9331ff906b2b57b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0babfd2e9c6cb4e49af57ed72e552ee1, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0babfd2e9c6cb4e49af57ed72e552ee1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -288,6 +292,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 94ba6d1f390e8224c9331ff906b2b57b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5e64a5f4f8c259345af3279c77087958, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5e64a5f4f8c259345af3279c77087958, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -402,7 +407,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.055000007, y: 0.263, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.7343376, y: 0.7343376, z: 0.7343376}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3407164963396794873}
@@ -426,6 +431,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -447,7 +455,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1978994509
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -6
   m_Sprite: {fileID: 1681348396, guid: 87b07d946debaf7489e251cbf64af500, type: 3}
@@ -489,6 +497,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8892229567953030795}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -512,7 +521,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,6 +533,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 8.87, y: 5.94}
   m_EdgeRadius: 0
