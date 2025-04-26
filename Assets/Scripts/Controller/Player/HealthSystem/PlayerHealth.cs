@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     public float HeartingTimer { get; set; }    
     public bool IsHearting { get; set; }
     public bool IsDead { get ; set ; }
-    public bool CanHurt { get => !state.IsDashing && !IsHearting /*&& !state.IsTakingDamageInBlock*/; }
+    public bool CanHurt { get => !state.IsDashing && !IsHearting; }
     public bool IsRepulsing { get; set; }
     public Rigidbody2D Rb { get; set; }
     public float RepulsiveDuration { get; set; } = .2f;
@@ -77,7 +77,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
         if (CanHurt)
         {
             CurrentHealth -= damage;
-            gameObject.layer = 15;
+            gameObject.layer = LayerMask.NameToLayer("PlayerPain");
             state.HeartingDisable();
             StartRepulse();
 
@@ -137,9 +137,12 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
 
     public void StopHearting()
     {
+        Debug.LogWarning("end");
+
         HeartingTimer = 0;
         IsHearting = false;
-        gameObject.layer = 11;
+        gameObject.layer = LayerMask.NameToLayer("Player");
+        damageAmount = 0;
 
         state.EnableAllActions();
     }

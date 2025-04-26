@@ -30,7 +30,7 @@ public class Mannequin : MonoBehaviour, IDamageable
         IsDead = true;
         CurrentHealth = 0;
 
-        gameObject.layer = 10;
+        gameObject.layer = LayerMask.NameToLayer("NoPlayer");
     }
 
     public void Hearting()
