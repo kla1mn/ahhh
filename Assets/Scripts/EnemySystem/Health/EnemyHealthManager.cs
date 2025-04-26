@@ -18,7 +18,6 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable, IRepulsive
     private Rigidbody2D rb;
 
     private EnemyState enemyState;
-    private BloodSpawner spawner;
 
     [SerializeField, HideInInspector] private int deadLayerIndex;
 
@@ -75,7 +74,6 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable, IRepulsive
 
         enemyState = gameObject.GetComponentInParent<EnemyState>();
 
-        spawner = GetComponent<BloodSpawner>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -94,8 +92,6 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable, IRepulsive
             Die();
         else
             Hearting();
-
-        spawner.SpawnAllBloodPrefabs();
     }
 
     public void Die()

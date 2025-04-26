@@ -7,7 +7,7 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
 {
     private const float LoseTargetRadius = 28f;
 
-    private RaycastHit2D target;
+    [SerializeField] private RaycastHit2D target;
 
     private IDamageable damageableTarget;
 
@@ -15,7 +15,7 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
     private Rigidbody2D rb;
 
     [Header("HeadEyeObject")]
-    [SerializeField, HideInInspector] private Transform headEyeObject;
+    [SerializeField] private Transform headEyeObject;
 
     [Header("See Target Variables")]
     [SerializeField] private float forwardVision;
@@ -59,6 +59,7 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
 
         if (!IsFollowingTarget)
         {
+            Debug.Log("sdfsfgsfd");
             target = newTarget;
             damageableTarget = target.transform.GetComponent<IDamageable>();
 
@@ -68,6 +69,7 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
 
     private bool TryGetTarget(out RaycastHit2D newTarget)
     {
+        Debug.Log("1");
         var forwardDir = enemyState.IsRight ? Vector2.right : Vector2.left;
 
         var forwardTarget = Physics2D.Raycast(headEyeObject.position, forwardDir,
@@ -80,15 +82,28 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
             backwardVision, visionMask);
 
         if (forwardTarget && targetMask == (targetMask | (1 << forwardTarget.transform.gameObject.layer)))
+        {
             newTarget = forwardTarget;
+            Debug.Log("2");
+        }
         else if (forwardUpTarget && targetMask == (targetMask | (1 << forwardUpTarget.transform.gameObject.layer)))
+        {
+            Debug.Log("3");
             newTarget = forwardUpTarget;
+        }
         else if (forwardDownTarget && targetMask == (targetMask | (1 << forwardDownTarget.transform.gameObject.layer)))
+        {
+            Debug.Log("4");
             newTarget = forwardDownTarget;
+        }
         else if (backwardTarget && targetMask == (targetMask | (1 << backwardTarget.transform.gameObject.layer)))
+        {
             newTarget = backwardTarget;
+            Debug.Log("5");
+        }
         else
         {
+            Debug.Log("6");
             newTarget = new RaycastHit2D();
             return false;
         }

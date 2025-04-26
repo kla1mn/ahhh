@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class PlayerDash : MonoBehaviour
         else
         {
             if (IsDashing)
-                rigidBody.gameObject.layer = 11;
+                rigidBody.gameObject.layer = LayerMask.NameToLayer("Player");
 
             if (playerCollisions.IsGrounded)
                 dashReset = true;
@@ -82,7 +83,7 @@ public class PlayerDash : MonoBehaviour
         else
         {
             if (IsSliding)
-                rigidBody.gameObject.layer = 11;
+                rigidBody.gameObject.layer = LayerMask.NameToLayer("Player");
             if (slideCullDownTimer > 0)
                 slideCullDownTimer -= Time.deltaTime;
             IsSliding = false;
@@ -97,7 +98,7 @@ public class PlayerDash : MonoBehaviour
         if (playerState.IsMoving && playerCollisions.IsGrounded && playerState.AbleToSlide && slideCullDownTimer <= 0)
         {
             slideTime = SlideDuration;
-            rigidBody.gameObject.layer = 8;
+            rigidBody.gameObject.layer = LayerMask.NameToLayer("PlayerDash");
             slideAudio.Play();
 
             if (playerState.IsAttacking)
@@ -108,7 +109,7 @@ public class PlayerDash : MonoBehaviour
             if (playerState.IsAttacking)
                 playerState.HeartingDisable();
             dashTime = DashDuration;
-            rigidBody.gameObject.layer = 8;
+            rigidBody.gameObject.layer = LayerMask.NameToLayer("PlayerDash");
             dashAudio.Play();
         }
     }
