@@ -2,30 +2,54 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - interactiveObject
+  - DestrObj
+  - Enemy
+  - PushableObject
+  - MiddleBG
+  - Player
+  - Static
+  - BG
+  - FG
+  - ItemPlatform
+  - Dinamic
+  - Light
+  - InteractableItems
+  - Enemy
+  - Audio
+  - Quest
+  - Interactable
+  - Enemy
+  - Nips
+  - DinamicItems
+  - DestrNature
+  - InputManager
+  - PlayerAnimator
+  - PlayerRb
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - PlayerDash
+  - Telega
+  - NoPlayer
+  - NoPlayerDamageble
+  - noCollider
+  - PostProcessing
+  - PlayerPain
+  - DestrObj
+  - CheckpointZone
+  - Checkpoint
+  - EnemyNoPlayer
+  - Platform
+  - Player
   - 
   - 
   - 
@@ -38,6 +62,38 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: distant background
+    uniqueID: 1651622731
+    locked: 0
+  - name: midle distant background
+    uniqueID: 3272223217
+    locked: 0
+  - name: background obj
+    uniqueID: 3268723751
+    locked: 0
+  - name: walls
+    uniqueID: 349747819
+    locked: 0
+  - name: objects
+    uniqueID: 2127445029
+    locked: 0
+  - name: enemys
+    uniqueID: 3715144083
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: player
+    uniqueID: 3245631791
+    locked: 0
+  - name: platforms
+    uniqueID: 2599946313
+    locked: 0
+  - name: foreground
+    uniqueID: 819474681
+    locked: 0
+  - name: hud
+    uniqueID: 3019823647
+    locked: 0
+  m_RenderingLayers:
+  - Default

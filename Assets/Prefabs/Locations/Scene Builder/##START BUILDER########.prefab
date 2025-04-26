@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5018878934212987993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5306377655854214126}
+  - component: {fileID: 7316891757463391397}
+  - component: {fileID: 2958371035959675247}
+  m_Layer: 10
+  m_Name: '##START BUILDER########'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5306377655854214126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018878934212987993}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.031234, y: 4.3791924, z: -0.060124222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7316891757463391397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018878934212987993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b9f53a9774fd841bb406447f0fd8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folders:
+  - folderName: '##PLAYER##'
+    parentHierarchy: 
+  - folderName: '##STATIC##'
+    parentHierarchy: 
+  - folderName: '#BACKGROUND#'
+    parentHierarchy: '##STATIC##'
+  - folderName: '#FOREGROUND#'
+    parentHierarchy: '##STATIC##'
+  - folderName: '#MIDDLE BG#'
+    parentHierarchy: '##STATIC##'
+  - folderName: '#ITEM PLATFORMS#'
+    parentHierarchy: '##STATIC##'
+  - folderName: '#ITEM WALLS#'
+    parentHierarchy: '##STATIC##'
+  - folderName: '##DINAMIC##'
+    parentHierarchy: 
+  - folderName: '#LIGHT#'
+    parentHierarchy: '##DINAMIC##'
+  - folderName: '#ITEMS#'
+    parentHierarchy: '##DINAMIC##'
+  - folderName: '##AUDIO##'
+    parentHierarchy: 
+  - folderName: '##QUESTS##'
+    parentHierarchy: 
+  - folderName: '##INTERACTABLE##'
+    parentHierarchy: 
+  - folderName: '#ENEMY#'
+    parentHierarchy: '##INTERACTABLE##'
+  - folderName: '#DESTR_OBJ#'
+    parentHierarchy: '##INTERACTABLE##'
+  - folderName: '#ITEMS#'
+    parentHierarchy: '##INTERACTABLE##'
+  - folderName: '#NIPS#'
+    parentHierarchy: '##INTERACTABLE##'
+  sceneObjects:
+  - name: PLAYER
+    prefab: {fileID: 9033176761308213836, guid: 6f68ce4d28659e14698909ab28348ff7, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    parentHierarchy: '##PLAYER##'
+  - name: LIGHT
+    prefab: {fileID: 8256376968902960492, guid: 889f607220e5a904ba553d537e95d4a5, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    parentHierarchy: '##PLAYER##'
+--- !u!114 &2958371035959675247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5018878934212987993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48ef942fd966f34ea2aa9aafe7cfb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagHierarchyMappings:
+  - tag: Player
+    targetFolderPath: '##PLAYER##'
+  - tag: Static
+    targetFolderPath: '##STATIC##'
+  - tag: BG
+    targetFolderPath: '##STATIC##/#BACKGROUND#'
+  - tag: FG
+    targetFolderPath: '##STATIC##/#FOREGROUND#'
+  - tag: MiddleBG
+    targetFolderPath: '##STATIC##/#MIDDLE BG#'
+  - tag: ItemPlatform
+    targetFolderPath: '##STATIC##/#ITEM PLATFORMS#'
+  - tag: Dinamic
+    targetFolderPath: '##DINAMIC##'
+  - tag: Light
+    targetFolderPath: '##DINAMIC##/#LIGHT#'
+  - tag: DinamicItems
+    targetFolderPath: '##DINAMIC##/#ITEMS#'
+  - tag: Enemy
+    targetFolderPath: '##INTERACTABLE##/#ENEMY#'
+  - tag: Audio
+    targetFolderPath: '##AUDIO##'
+  - tag: Quest
+    targetFolderPath: '##QUESTS##'
+  - tag: Interactable
+    targetFolderPath: '##INTERACTABLE##'
+  - tag: Enemy
+    targetFolderPath: '##INTERACTABLE##/#ENEMY#'
+  - tag: DestrObj
+    targetFolderPath: '##INTERACTABLE##/#DESTR_OBJ#'
+  - tag: InteractableItems
+    targetFolderPath: '##INTERACTABLE##/#ITEMS#'
+  - tag: Nips
+    targetFolderPath: '##INTERACTABLE##/#NIPS#'
