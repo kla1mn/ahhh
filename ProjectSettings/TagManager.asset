@@ -24,31 +24,27 @@ TagManager:
   - Enemy
   - Nips
   - DinamicItems
-  - PlayerAnimator
-  - InputManager
-  - PlayerRb
-  - DestrNature
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Wall
   - Water
   - UI
+  - Ground
+  - Enemy
+  - PlayerDash
+  - Telega
+  - NoPlayer
+  - NoPlayerDamageble
+  - noCollider
+  - PostProcessing
+  - PlayerPain
   - DestrObj
-  - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - CheckpointZone
+  - Checkpoint
+  - EnemyNoPlayer
+  - Platform
   - 
   - 
   - 

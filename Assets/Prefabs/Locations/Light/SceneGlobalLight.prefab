@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5793192240943318381}
   - component: {fileID: 5978184392369189482}
   - component: {fileID: 578600331103954735}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Post Processing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631886874240683320}
   - component: {fileID: 3012424351072057172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GlobalLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4577029666440683131}
   - component: {fileID: 726893262952022674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SUN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2552027057602998941}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SceneGlobalLight
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5793192240943318381}
   - {fileID: 4577029666440683131}

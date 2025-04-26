@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7924703825219558733}
   - component: {fileID: 7924703825219558730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u041A\u043E\u043D\u0432\u0435\u0435\u0440 FG"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7924703825219558731}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.88, y: -7.37, z: -5}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 0.20000002, y: 0.20000002, z: 0.20000002}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7924703825219558730
 SpriteRenderer:
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1667237829
-  m_SortingLayer: 7
+  m_SortingLayerID: -1026243545
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1226421675, guid: ed6c4bf09a5aa2540965ad5f3f4e4f43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

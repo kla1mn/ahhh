@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6802674806010400775}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Block Up Left
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -26,8 +26,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.57, y: 19.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6802674806681912014}
   - {fileID: 6802674807213322286}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6802674806681912014}
   - component: {fileID: 6802674806681912009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6802674807213322286}
   - component: {fileID: 6802674807213322281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left UP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
