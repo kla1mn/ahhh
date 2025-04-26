@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6919956028237275725}
   - component: {fileID: 6919956028237275714}
   - component: {fileID: 6919956028237275715}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: "\u042F\u0429\u0418\u041A 1"
   m_TagString: DestrObj
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6919956028269015668}
   - component: {fileID: 6919956028269015669}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6919956028671154795}
   - component: {fileID: 6919956028671154792}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6919956029348791401}
   - component: {fileID: 6919956029348791400}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: "\u043B\u043E\u043C \u043E\u0431\u044A\u0435\u043A\u0442\u044B_0 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

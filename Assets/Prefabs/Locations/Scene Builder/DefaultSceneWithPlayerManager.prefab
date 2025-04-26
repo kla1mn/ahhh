@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5306377655854214126}
   - component: {fileID: 7316891757463391397}
   - component: {fileID: 2958371035959675247}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DefaultSceneWithPlayerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
