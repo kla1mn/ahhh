@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2337827074605247675}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.630005, y: 10.62001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,7 +33,6 @@ Transform:
   - {fileID: 7994361246700097759}
   - {fileID: 4816537350773193163}
   m_Father: {fileID: 5893767806132967169}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3092800748627725791
 GameObject:
@@ -57,6 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3092800748627725791}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -67,7 +68,6 @@ Transform:
   - {fileID: 1741206029115138863}
   - {fileID: 9215416021952507964}
   m_Father: {fileID: 5893767806132967169}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8219479596184713809
 GameObject:
@@ -79,9 +79,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5893767806132967169}
   - component: {fileID: 8656398315240403479}
+  - component: {fileID: 8857940595325218283}
   m_Layer: 3
   m_Name: BigKonveer
-  m_TagString: Untagged
+  m_TagString: FG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +94,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8219479596184713809}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 522.19, y: 135.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -102,7 +104,6 @@ Transform:
   - {fileID: 3757435588851383758}
   - {fileID: 7134562705574642841}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8656398315240403479
 BoxCollider2D:
@@ -114,10 +115,29 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.6589508, y: 2.4998703}
+  m_Offset: {x: -2.6589508, y: 3.129692}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -128,8 +148,38 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22.181427, y: 16.756912}
+  m_Size: {x: 22.181427, y: 18.016556}
   m_EdgeRadius: 0
+--- !u!114 &8857940595325218283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8219479596184713809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ShapePath:
+  - {x: -13.749634, y: -5.8785706, z: 0}
+  - {x: -13.749634, y: 12.13797, z: 0}
+  - {x: 8.431763, y: 12.13797, z: 0}
+  - {x: 8.431763, y: -5.8785706, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 35546
+  m_LocalBounds:
+    m_Center: {x: -2.6589355, y: 3.1296997, z: 0}
+    m_Extent: {x: 11.090698, y: 9.00827, z: 0}
 --- !u!1 &8763463010619916177
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +203,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8763463010619916177}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.6099854, y: 2.2082672, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -163,13 +214,13 @@ Transform:
   - {fileID: 2157974516142420582}
   - {fileID: 4975769767199498919}
   m_Father: {fileID: 5893767806132967169}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &580436249399276447
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1124674287799137251}
     m_Modifications:
     - target: {fileID: 7421846987303117632, guid: df9955a99e56643498f1c48f6b775b61, type: 3}
@@ -220,7 +271,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Konveer Up Right  '
       objectReference: {fileID: 0}
+    - target: {fileID: 7421846987982041486, guid: df9955a99e56643498f1c48f6b775b61, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421846988507595630, guid: df9955a99e56643498f1c48f6b775b61, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df9955a99e56643498f1c48f6b775b61, type: 3}
 --- !u!4 &7994361246700097759 stripped
 Transform:
@@ -232,6 +294,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1124674287799137251}
     m_Modifications:
     - target: {fileID: 5710739442947039824, guid: b15b489b443d8c24fb6fc77e068ddb69, type: 3}
@@ -282,7 +345,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Konveer Up Left '
       objectReference: {fileID: 0}
+    - target: {fileID: 5710739443352219806, guid: b15b489b443d8c24fb6fc77e068ddb69, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710739443882033790, guid: b15b489b443d8c24fb6fc77e068ddb69, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b15b489b443d8c24fb6fc77e068ddb69, type: 3}
 --- !u!4 &5138186018754590211 stripped
 Transform:
@@ -294,8 +368,21 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1124674287799137251}
     m_Modifications:
+    - target: {fileID: 1017797832136999880, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393580081820963425, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393580082352300161, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5393580082755449421, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
       propertyPath: m_Name
       value: Konveer Up
@@ -344,7 +431,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6362838592552685119, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceaaf6f93c4d9674795f49a189b3f6cc, type: 3}
 --- !u!4 &4816537350773193163 stripped
 Transform:
@@ -356,6 +450,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3757435588851383758}
     m_Modifications:
     - target: {fileID: 6535375094175452877, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
@@ -418,7 +513,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
 --- !u!4 &4975769767199498919 stripped
 Transform:
@@ -430,8 +536,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7134562705574642841}
     m_Modifications:
+    - target: {fileID: 1664563742297115409, guid: 1e94a982b0f16d049b4bcd6581b57e12, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664563742826428913, guid: 1e94a982b0f16d049b4bcd6581b57e12, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1664563743500036925, guid: 1e94a982b0f16d049b4bcd6581b57e12, type: 3}
       propertyPath: m_Name
       value: 'Konveer Down Right  '
@@ -481,6 +596,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e94a982b0f16d049b4bcd6581b57e12, type: 3}
 --- !u!4 &3583002678051502203 stripped
 Transform:
@@ -492,6 +610,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7134562705574642841}
     m_Modifications:
     - target: {fileID: 2625272865415504368, guid: cbef795579986a0478550f61d565176b, type: 3}
@@ -542,7 +661,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2625272866620113372, guid: cbef795579986a0478550f61d565176b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625272867166204732, guid: cbef795579986a0478550f61d565176b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbef795579986a0478550f61d565176b, type: 3}
 --- !u!4 &1741206029115138863 stripped
 Transform:
@@ -554,6 +684,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3757435588851383758}
     m_Modifications:
     - target: {fileID: 705947404352484697, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
@@ -604,7 +735,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Konveer Right  '
       objectReference: {fileID: 0}
+    - target: {fileID: 705947405287478647, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 705947405835593623, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534e84f6392ee2344ae0954fe6ae46fe, type: 3}
 --- !u!4 &4025318148241944866 stripped
 Transform:
@@ -616,6 +758,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3757435588851383758}
     m_Modifications:
     - target: {fileID: 6535375094175452877, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
@@ -678,7 +821,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6535375094845987841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535375095388335841, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17188b0952e966b45ab05c6e66aac569, type: 3}
 --- !u!4 &2157974516142420582 stripped
 Transform:
@@ -690,8 +844,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3757435588851383758}
     m_Modifications:
+    - target: {fileID: 7787002619398363041, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787002619946476865, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7787002621142697325, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
       propertyPath: m_Name
       value: 'Konveer Left '
@@ -741,6 +904,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248c5f362739efc49b9e90b0106fde90, type: 3}
 --- !u!4 &4352980866052729383 stripped
 Transform:
@@ -752,6 +918,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7134562705574642841}
     m_Modifications:
     - target: {fileID: 2625272865415504368, guid: cbef795579986a0478550f61d565176b, type: 3}
@@ -802,7 +969,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2625272866620113372, guid: cbef795579986a0478550f61d565176b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625272867166204732, guid: cbef795579986a0478550f61d565176b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbef795579986a0478550f61d565176b, type: 3}
 --- !u!4 &9215416021952507964 stripped
 Transform:
@@ -814,6 +992,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7134562705574642841}
     m_Modifications:
     - target: {fileID: 6556908811705264921, guid: 61a32e68774f62b499bca0a0b5a5a166, type: 3}
@@ -864,7 +1043,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6556908812918262581, guid: 61a32e68774f62b499bca0a0b5a5a166, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556908813447576021, guid: 61a32e68774f62b499bca0a0b5a5a166, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61a32e68774f62b499bca0a0b5a5a166, type: 3}
 --- !u!4 &4209503490940260056 stripped
 Transform:
