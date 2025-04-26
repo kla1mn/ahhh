@@ -39,7 +39,7 @@ public class GrassCollision : ShakingStatic
     {
         if (pushingObject != null)
         {
-            var influence = pushingObject.velocity.x/3;
+            var influence = pushingObject.linearVelocity.x/3;
 
             if (externalInfluence < influence)
                 externalInfluence += Time.deltaTime * speed;

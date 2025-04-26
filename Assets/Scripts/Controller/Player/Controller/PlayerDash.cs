@@ -54,7 +54,7 @@ public class PlayerDash : MonoBehaviour
             dashReset = false;
             IsDashing = true;
             dashTime -= Time.deltaTime;
-            rigidBody.velocity = new Vector2(DashPower * direction, 0);
+            rigidBody.linearVelocity = new Vector2(DashPower * direction, 0);
         }
         else
         {
@@ -74,7 +74,7 @@ public class PlayerDash : MonoBehaviour
         {
             IsSliding = true;
             slideTime -= Time.deltaTime;
-            rigidBody.velocity = new Vector2(SlidePower * direction, rigidBody.velocity.y);
+            rigidBody.linearVelocity = new Vector2(SlidePower * direction, rigidBody.linearVelocity.y);
             if (playerCollisions.IsTouchingWallWithBody || !playerCollisions.IsGrounded)
                 slideTime = 0;
             slideCullDownTimer = SlideCullDownDuration;

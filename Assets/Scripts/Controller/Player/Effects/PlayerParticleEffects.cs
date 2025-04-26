@@ -50,7 +50,7 @@ public class PlayerParticleEffects : MonoBehaviour
 
     private bool TryToStopMovingAnimation()
     {
-        if (!collisions.IsGrounded || rb.velocity.x < .2f && rb.velocity.x > -.2f || !state.IsMoving)
+        if (!collisions.IsGrounded || rb.linearVelocity.x < .2f && rb.linearVelocity.x > -.2f || !state.IsMoving)
         {
             isMoveAnimating = false;
             moveParticle.Stop();

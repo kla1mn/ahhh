@@ -40,7 +40,7 @@ public class ShakingRB : ShakingObject, IRepulsive
     {
         if (IsRepulsing)
         {
-            rb.velocity = new Vector2(Direction * OwnRepulciveVelocity.x, OwnRepulciveVelocity.y);
+            rb.linearVelocity = new Vector2(Direction * OwnRepulciveVelocity.x, OwnRepulciveVelocity.y);
         }
     }
 

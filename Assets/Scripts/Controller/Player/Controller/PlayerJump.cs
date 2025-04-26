@@ -45,7 +45,7 @@ public class PlayerJump : MonoBehaviour
     {
         if ((playerCollisions.IsGrounded))
             isAirJumpAvailable = true;
-        if (rigidBody.velocity.y <= 0)
+        if (rigidBody.linearVelocity.y <= 0)
             IsJumping = false;
     }
 
@@ -69,7 +69,7 @@ public class PlayerJump : MonoBehaviour
         if (jump)
         {
 
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpingVelocity);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, jumpingVelocity);
             IsJumping = true;
 
             Debug.Log(IsJumping);

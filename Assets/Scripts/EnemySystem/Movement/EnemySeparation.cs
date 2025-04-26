@@ -41,7 +41,7 @@ public class EnemySeparation : MonoBehaviour
         if (count > 0)
         {
             separationVector /= count;
-            rb.velocity += separationVector * separationStrength * Time.fixedDeltaTime;
+            rb.linearVelocity += separationVector * separationStrength * Time.fixedDeltaTime;
         }
     }
 }

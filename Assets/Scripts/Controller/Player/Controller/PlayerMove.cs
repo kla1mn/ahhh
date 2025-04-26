@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
+        rigidBody.linearVelocity = new Vector2(0, rigidBody.linearVelocity.y);
     }
 
     private void Update()
@@ -86,13 +86,13 @@ public class PlayerMove : MonoBehaviour
     {
         if (IsMoving)
         {
-            rigidBody.velocity = new Vector2(horizontalInput * currentSpeed, rigidBody.velocity.y);
+            rigidBody.linearVelocity = new Vector2(horizontalInput * currentSpeed, rigidBody.linearVelocity.y);
 
             CheckToStopMove();
         }
         else if (CanZeroVelocity() || playerState.IsFalling && !IsMoving && !playerState.IsHearting)
         {
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x * StopCoeficient, rigidBody.velocity.y);
+            rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x * StopCoeficient, rigidBody.linearVelocity.y);
         }
             
     }
@@ -117,7 +117,7 @@ public class PlayerMove : MonoBehaviour
     {
         var delay = !wasSprinting ? WalkStopDuration : SprintStopDuration;
         IsMoving = false;
-        rigidBody.velocity = new Vector2(0, 0);
+        rigidBody.linearVelocity = new Vector2(0, 0);
 
         Invoke(nameof(ResumeMovingProcess), delay);
     }
@@ -127,7 +127,7 @@ public class PlayerMove : MonoBehaviour
         playerState.AbleToMove = false;
         playerState.AbleToFlip = false;
 
-        rigidBody.velocity = new Vector2(0, 0);
+        rigidBody.linearVelocity = new Vector2(0, 0);
     }
 
     private void ResumeMovingProcess()
@@ -167,7 +167,7 @@ public class PlayerMove : MonoBehaviour
                 StopMovingToPoint();
             else
             {
-                rigidBody.velocity = new Vector2(directionToPoint * currentSpeed, rigidBody.velocity.y);
+                rigidBody.linearVelocity = new Vector2(directionToPoint * currentSpeed, rigidBody.linearVelocity.y);
             }
 
         }
@@ -175,7 +175,7 @@ public class PlayerMove : MonoBehaviour
 
     private void StopMovingToPoint()
     {
-        rigidBody.velocity = Vector2.zero;
+        rigidBody.linearVelocity = Vector2.zero;
         if (playerState.IsFacingRight != pointIsRight)
             playerState.ForceFlip();
         IsMovingToPoint = false;

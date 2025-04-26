@@ -100,12 +100,12 @@ public class CheckpointEnemyMovement : MonoBehaviour, IEnemyMovement
     private void MoveToPoint(Vector3 targetPosition)
     {
         Vector2 direction = ((Vector2)targetPosition - rb.position).normalized;
-        rb.velocity = direction * movementSpeed;
+        rb.linearVelocity = direction * movementSpeed;
     }
 
     private void WaitingStopMovement()
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         isWaiting = true;
     }
 

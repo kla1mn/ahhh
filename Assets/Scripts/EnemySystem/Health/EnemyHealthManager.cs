@@ -154,13 +154,13 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable, IRepulsive
         if (!isRepulsing) return;
 
         var direction = new Vector2(Direction * (AcceptedRepulciveVelocity.x + ownRepulsiveVelocity.x) / 2, (AcceptedRepulciveVelocity.y + ownRepulsiveVelocity.y) / 2);
-        rb.velocity = direction;
+        rb.linearVelocity = direction;
     }
 
     public void StopRepulsing()
     {
         isRepulsing = false;
         if (!enemyState.IsAttacking)
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
     }
 }

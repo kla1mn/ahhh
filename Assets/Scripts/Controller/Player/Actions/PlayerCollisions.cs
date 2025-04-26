@@ -67,7 +67,7 @@ public class PlayerCollisions : MonoBehaviour
     private void LayingOnGround()
     {
         if (IsGroundStunning && !playerState.IsHearting)
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         if (playerState.IsHearting)
             IsGroundStunning = false;
@@ -93,9 +93,9 @@ public class PlayerCollisions : MonoBehaviour
 
     private void ToLand()
     {
-        if (IsAboveGround && rb.velocity.y < -2f && !wasLanding)
+        if (IsAboveGround && rb.linearVelocity.y < -2f && !wasLanding)
         {
-            if (rb.velocity.y < stunningVelocityY)
+            if (rb.linearVelocity.y < stunningVelocityY)
                 StartGroundStunning();
 
             landingAudio.Play();
@@ -108,7 +108,7 @@ public class PlayerCollisions : MonoBehaviour
     private void StartGroundStunning()
     {
         playerState.DissableAllActions();
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         IsGroundStunning = true;
         fallAudio.Play();
 

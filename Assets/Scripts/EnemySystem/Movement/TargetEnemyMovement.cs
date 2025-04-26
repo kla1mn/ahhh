@@ -66,6 +66,6 @@ public class TargetEnemyMovement : CheckpointEnemyMovement
     {
         var horizontalInput = targetFinder.GetDistanceToTarget().x;
         var input = !IsMoving ? 0 : Math.Sign(horizontalInput) * chaiseSpeed;
-        rb.velocity = new Vector2(input, rb.velocity.y);
+        rb.linearVelocity = new Vector2(input, rb.linearVelocity.y);
     }
 }

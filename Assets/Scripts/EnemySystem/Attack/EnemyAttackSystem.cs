@@ -190,7 +190,7 @@ public class EnemyAttackSystem : MonoBehaviour, IEnemyAttackSystem, IJerker
         if (!isJerking)
             return;
 
-        rb.velocity = new Vector2(enemyState.IsRight ? currentJerkForce : -currentJerkForce, rb.velocity.y);
+        rb.linearVelocity = new Vector2(enemyState.IsRight ? currentJerkForce : -currentJerkForce, rb.linearVelocity.y);
     }
 
     private void StopJerk()

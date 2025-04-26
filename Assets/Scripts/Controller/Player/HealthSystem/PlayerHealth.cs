@@ -150,13 +150,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     public void MakeRepulsion()
     {
         if (IsRepulsing)
-            Rb.velocity = new Vector2((OwnRepulciveVelocity.x + AcceptedRepulciveVelocity.x) / 2 * Direction, 1 * (OwnRepulciveVelocity.y + AcceptedRepulciveVelocity.y) / 2);
+            Rb.linearVelocity = new Vector2((OwnRepulciveVelocity.x + AcceptedRepulciveVelocity.x) / 2 * Direction, 1 * (OwnRepulciveVelocity.y + AcceptedRepulciveVelocity.y) / 2);
     }
 
     public void StopRepulsing()
     {
         IsRepulsing = false;
-        Rb.velocity = new Vector2(OwnRepulciveVelocity.x * Direction, 0);
+        Rb.linearVelocity = new Vector2(OwnRepulciveVelocity.x * Direction, 0);
         AcceptedRepulciveVelocity = new Vector2(OwnRepulciveVelocity.x, OwnRepulciveVelocity.y);
     }
 
