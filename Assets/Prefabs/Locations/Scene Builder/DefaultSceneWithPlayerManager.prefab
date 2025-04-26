@@ -110,11 +110,11 @@ MonoBehaviour:
     targetFolderPath: '##DINAMIC##'
   - tag: Light
     targetFolderPath: '##DINAMIC##/#LIGHT#'
-  - tag: Items
+  - tag: DinamicItems
     targetFolderPath: '##DINAMIC##/#ITEMS#'
   - tag: Enemy
     targetFolderPath: '##INTERACTABLE##/#ENEMY#'
-  - tag: Auido
+  - tag: Audio
     targetFolderPath: '##AUDIO##'
   - tag: Quest
     targetFolderPath: '##QUESTS##'
@@ -124,7 +124,7 @@ MonoBehaviour:
     targetFolderPath: '##INTERACTABLE##/#ENEMY#'
   - tag: DestrObj
     targetFolderPath: '##INTERACTABLE##/#DESTR_OBJ#'
-  - tag: Items
+  - tag: InteractableItems
     targetFolderPath: '##INTERACTABLE##/#ITEMS#'
   - tag: Nips
     targetFolderPath: '##INTERACTABLE##/#NIPS#'
