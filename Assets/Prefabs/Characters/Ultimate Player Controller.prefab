@@ -3250,6 +3250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoad: 0
+  state: {fileID: 7479521366999120419}
 --- !u!1 &3277813595086205802
 GameObject:
   m_ObjectHideFlags: 0

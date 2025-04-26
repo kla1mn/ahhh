@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6088075574225355458}
   m_Layer: 10
   m_Name: "\u0417\u043D\u0430\u043A2"
-  m_TagString: Untagged
+  m_TagString: InteractableItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

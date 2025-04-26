@@ -27,7 +27,6 @@ public class HillZone : MonoBehaviour
         if (!onZone)
             return;
 
-        effects.StartDepthOfFieldAnimation(true);
         hillAudio.Play();
 
         playerHealth.CurrentHealth = playerHealth.MaxHealth;

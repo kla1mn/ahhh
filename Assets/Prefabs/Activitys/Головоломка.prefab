@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8299396825556290070}
   m_Layer: 6
   m_Name: "\u0413\u043E\u043B\u043E\u0432\u043E\u043B\u043E\u043C\u043A\u0430"
-  m_TagString: Untagged
+  m_TagString: InteractableItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
