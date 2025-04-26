@@ -12,11 +12,12 @@ public class GroundEnemy : MonoBehaviour
     private Transform target;
     private Rigidbody2D rb;
 
-    [SerializeField] private EnemyHealth EnemyHealth;
+    private EnemyHealth EnemyHealth;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        EnemyHealth = GetComponent<EnemyHealth>();
         target = GameObject.FindGameObjectWithTag("PlayerRb").transform;
 
         if (visualPart == null && transform.childCount > 0)

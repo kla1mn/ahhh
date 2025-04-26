@@ -10,14 +10,14 @@ public class FlyingEnemy : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    [SerializeField] private EnemyHealth health;
+    private EnemyHealth health;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (target == null)
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+        health = GetComponent<EnemyHealth>();
+        target = GameObject.FindGameObjectWithTag("PlayerRb").transform;
 
         if (visualPart == null && transform.childCount > 0)
             visualPart = transform.GetChild(0);

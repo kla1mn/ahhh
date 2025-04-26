@@ -43,6 +43,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        target = GameObject.FindGameObjectWithTag("PlayerRb").transform;
+
         currentHealth = maxHealth;
 
         // ������������� ������� ���� ���� �� ������
