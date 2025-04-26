@@ -13,7 +13,7 @@ public class PlayerAttackHitZone : HitZone
     protected override void Damage(IDamageable damageableObj)
     {
         damage = playerAttackSistem.CurrentDamage * (isStrong ? 1.5f : 1f);
-        effects.StartAttackShake();
+        //effects.StartAttackShake();
 
         base.Damage(damageableObj);
     }

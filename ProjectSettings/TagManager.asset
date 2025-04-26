@@ -24,6 +24,10 @@ TagManager:
   - Enemy
   - Nips
   - DinamicItems
+  - PlayerAnimator
+  - InputManager
+  - PlayerRb
+  - DestrNature
   layers:
   - Default
   - TransparentFX
@@ -31,8 +35,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - DestrObj
+  - Player
   - 
   - 
   - 

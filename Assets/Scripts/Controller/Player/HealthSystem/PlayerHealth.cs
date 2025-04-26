@@ -29,8 +29,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     private int updatesSkiped;
     private float damageAmount;
 
-    private PlayerState state;
-    private BloodSpawner spawner;
+    [SerializeField] private PlayerState state;
+    //[SerializeField] private BloodSpawner spawner;
 
     [Space]
     [Header("Audio")]
@@ -41,8 +41,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
 
     private void Awake()
     {
-        state = GameObject.FindWithTag("Player").GetComponent<PlayerState>();
-        spawner = GetComponent<BloodSpawner>();
+      
         Rb = gameObject.GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -82,7 +81,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
             state.HeartingDisable();
             StartRepulse();
 
-            spawner.SpawnAllBloodPrefabs();
+           // spawner.SpawnAllBloodPrefabs();
             AudioPlay();
 
             if (CurrentHealth < 0)

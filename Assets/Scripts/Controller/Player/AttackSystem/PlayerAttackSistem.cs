@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackSistem : MonoBehaviour, IJerker
 {
-    private const float ComboWaitDuration = .5f;
+    private const float ComboWaitDuration = .45f;
 
     [Header("Audio")]
     [SerializeField] private AudioSource fistAttackAudio;
@@ -18,7 +18,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     private PlayerState playerState;
 
     private InputManager inputManager;
-    private float UnlockDuration;
+    [SerializeField] private float UnlockDuration;
 
     public bool IsAttacking { get; private set; }
     public bool IsComboWaiting { get; private set; }
@@ -83,7 +83,6 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
 
     private void StopWaitCombo()
     {
- 
         IsComboWaiting = false;
         comboWaitTimer = 0;
         CurrentAttack = 0;
