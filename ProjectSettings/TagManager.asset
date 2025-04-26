@@ -59,44 +59,35 @@ TagManager:
   - 
   m_SortingLayers:
   - name: distant background
-    uniqueID: 0
+    uniqueID: 1651622731
     locked: 0
-  - name: middle distant background
-    uniqueID: 0
+  - name: midle distant background
+    uniqueID: 3272223217
     locked: 0
   - name: background obj
-    uniqueID: 0
+    uniqueID: 3268723751
     locked: 0
   - name: walls
-    uniqueID: 0
+    uniqueID: 349747819
     locked: 0
   - name: objects
-    uniqueID: 0
+    uniqueID: 2127445029
     locked: 0
-  - name: interractableObjects
-    uniqueID: 0
-    locked: 0
-  - name: enemies
-    uniqueID: 0
+  - name: enemys
+    uniqueID: 3715144083
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: player
-    uniqueID: 0
+    uniqueID: 3245631791
     locked: 0
   - name: platforms
-    uniqueID: 0
-    locked: 0
-  - name: playerClimb
-    uniqueID: 0
+    uniqueID: 2599946313
     locked: 0
   - name: foreground
-    uniqueID: 0
-    locked: 0
-  - name: close foreground
-    uniqueID: 0
+    uniqueID: 819474681
     locked: 0
   - name: hud
-    uniqueID: 0
+    uniqueID: 3019823647
     locked: 0
