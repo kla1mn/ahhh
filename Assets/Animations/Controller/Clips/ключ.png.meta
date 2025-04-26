@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Animations/Controller/Clips/ключ.png.meta
 guid: aa6abefaa3ac0b340b0bc2972c7b5a3c
+=======
+guid: fde153bfbaadbc84ea092b4d0badbdb2
+>>>>>>> Stashed changes:Assets/багованный жук.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
