@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 504526322724731625, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
@@ -31,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -175410643, guid: 78b9f0b11190f32419ae0e6586b6a2a9, type: 3}
+    - target: {fileID: 894465334479250372, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 103
+      objectReference: {fileID: 0}
     - target: {fileID: 4939256303559999431, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.06
@@ -119,6 +124,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 638396026, guid: 78b9f0b11190f32419ae0e6586b6a2a9, type: 3}
+    - target: {fileID: 5237666875478291053, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 5237666876003319946, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.06
@@ -139,5 +148,12 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 638396026, guid: 78b9f0b11190f32419ae0e6586b6a2a9, type: 3}
+    - target: {fileID: 6501897393741950515, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 101
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb3fda1dbca0e6943a1c7bbb27e733f5, type: 3}
