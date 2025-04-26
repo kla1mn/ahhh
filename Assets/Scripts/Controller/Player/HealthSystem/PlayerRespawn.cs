@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class PlayerRespawn : MonoBehaviour
 {
     [SerializeField] private int sceneLoad;
-     
-    public void RespawnPlayer()
-    {
 
+    [SerializeField] private PlayerState state;
+
+    private void Update()
+    {
+        if (state.IsDead)
+            SceneLoader.LoadScene(sceneLoad);
     }
 }

@@ -81,6 +81,7 @@ public class EnemyTargetFinder : MonoBehaviour, IEnemyTargetManager
         var backwardTarget = Physics2D.Raycast(headEyeObject.position, -1 * forwardDir,
             backwardVision, visionMask);
 
+
         if (forwardTarget && targetMask == (targetMask | (1 << forwardTarget.transform.gameObject.layer)))
         {
             newTarget = forwardTarget;
