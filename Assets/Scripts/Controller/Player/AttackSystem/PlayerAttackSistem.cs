@@ -13,6 +13,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     [SerializeField] private float damage;
     [SerializeField] private Vector2 repulsive;
 
+
     private float comboWaitTimer;
 
     private PlayerState playerState;
@@ -42,7 +43,10 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     {
         inputManager = GameObject.FindGameObjectWithTag("InputManager").GetComponent<InputManager>();
 
-        inputManager.OnAttackStarted += StartAttack;
+
+            inputManager.OnAttackStarted += StartAttack;
+
+        
 
         playerState = GetComponent<PlayerState>();
     }

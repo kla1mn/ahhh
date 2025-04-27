@@ -12,7 +12,11 @@ public class InputManager : MonoBehaviour
     private InputActions _inputActions;
     private InputActions.PlayerActions _playerActions;
     private InputActions.GlobalInventoryActions _globalInventoryActions;
-    
+
+    // Оригинальные обработчики событий
+    public EventHandler OriginalJumpStartedHandler;
+    public EventHandler OriginalAttackStartedHandler;
+
     //player
     public event EventHandler OnJumpStarted;
     public event EventHandler OnJumpPerformed;
@@ -39,6 +43,12 @@ public class InputManager : MonoBehaviour
     public event EventHandler OnInvBack;
     public event EventHandler OnInvLeft;
     public event EventHandler OnInvRight;
+
+    private void Awake()
+    {
+        OriginalJumpStartedHandler = OnJumpStarted;
+        OriginalAttackStartedHandler = OnAttackStarted;
+    }
 
     //player
     private void JumpOnStart(InputAction.CallbackContext obj) 

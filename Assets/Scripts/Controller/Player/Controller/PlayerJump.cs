@@ -18,6 +18,7 @@ public class PlayerJump : MonoBehaviour
 
     [SerializeField] private AudioSource jumpSource;
 
+     
     private Rigidbody2D rigidBody;
 
     private InputManager inputManager;
@@ -36,9 +37,13 @@ public class PlayerJump : MonoBehaviour
         rigidBody = GameObject.FindGameObjectWithTag("PlayerRb").GetComponent<Rigidbody2D>();
         playerState = GetComponent<PlayerState>();
         playerCollisions = GetComponent<PlayerCollisions>();
-        inputManager.OnJumpStarted += (snd, args) => jumpButtonIsPressed = true;
-        inputManager.OnJumpPerformed += Jump;
-        inputManager.OnJumpCanceled += (snd, args) => jumpButtonIsPressed = false;
+
+
+            inputManager.OnJumpStarted += (snd, args) => jumpButtonIsPressed = true;
+            inputManager.OnJumpPerformed += Jump;
+            inputManager.OnJumpCanceled += (snd, args) => jumpButtonIsPressed = false;
+        
+        
     }
 
     private void Update()
