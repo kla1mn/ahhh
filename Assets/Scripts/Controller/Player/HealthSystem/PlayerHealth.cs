@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = System.Random;
 
@@ -38,16 +39,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     [SerializeField] private AudioSource[] painSound;
     [SerializeField] private AudioSource criticalSound;
     [SerializeField] private AudioSource deathSound;
+    private TMP_Text healthText;
 
     private void Awake()
     {
-      
+        
         Rb = gameObject.GetComponent<Rigidbody2D>();
+        healthText = GetComponentInChildren<TMP_Text>();
     }
     void Update()
     {
         Hearting();
         MakeRepulsion();
+        UpdateHealthUI();
     }
     
     void FixedUpdate()
@@ -164,5 +168,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     {
         IsRepulsing = true;
         Invoke(nameof(StopRepulsing), RepulsiveDuration + AcceptedRepulciveVelocity.x / 100);
+    }
+    
+    private void UpdateHealthUI()
+    {
+        if (healthText != null)
+            healthText.text = $"{CurrentHealth:0}/{MaxHealth:0}";
+        else
+            Debug.Log("Health Text is null");
     }
 }
