@@ -435,7 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 328dffee152474c4ba216dc74e602285, type: 3}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: repulsiveForce
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: spriteRenderers.Array.size
@@ -553,6 +557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ATTACK_ENEMY (BROKEN) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3237640266392040021, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6547576541179573284, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: m_Animation
       value: 
@@ -569,6 +577,10 @@ PrefabInstance:
       propertyPath: 'm_Animations.Array.data[1]'
       value: 
       objectReference: {fileID: 7400000, guid: 1012562025852d74085cba2cf2ae5362, type: 2}
+    - target: {fileID: 6927384401990552546, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: damage
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7255900698755178292, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: bossEnemy
       value: 
