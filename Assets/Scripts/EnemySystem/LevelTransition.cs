@@ -5,23 +5,20 @@ using UnityEngine.UI;
 
 public class LevelTransition : MonoBehaviour
 {
-    [Header("Спрайт круга")]
-    public Sprite circleSprite;
+    [Header("Спрайт круга")] public Sprite circleSprite;
 
-    [Header("Настройки анимации")]
-    public float fadeDuration = 2f;
+    [Header("Настройки анимации")] public float fadeDuration = 2f;
 
-    [SerializeField] 
-    public EnemyHealth enemyHealth;
-    
+    [SerializeField] public EnemyHealth enemyHealth;
+
     private bool isFading;
 
     void Update()
     {
-        if (isFading) 
+        if (isFading)
             return;
 
-        if (enemyHealth.IsDead)
+        if (enemyHealth.IsDead || enemyHealth == null)
             StartCoroutine(FadeAndNext());
     }
 
@@ -29,7 +26,7 @@ public class LevelTransition : MonoBehaviour
     {
         isFading = true;
 
-        
+
         var canvas = FindObjectOfType<Canvas>();
         if (canvas == null)
         {
@@ -46,13 +43,13 @@ public class LevelTransition : MonoBehaviour
         var image = circleGO.AddComponent<Image>();
         image.sprite = circleSprite;
         image.color = Color.white;
-        image.preserveAspect = true;            // сохраняем форму круга
+        image.preserveAspect = true;
 
         var rt = image.rectTransform;
         rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
         rt.pivot = new Vector2(0.5f, 0.5f);
         rt.anchoredPosition = Vector2.zero;
-        rt.sizeDelta = new Vector2(100f, 100f); // задаём изначальный диаметр круга
+        rt.sizeDelta = new Vector2(100f, 100f);
 
         var screenDiag = Mathf.Sqrt(Screen.width * Screen.width + Screen.height * Screen.height);
         var targetScale = screenDiag / rt.sizeDelta.x;
@@ -67,6 +64,7 @@ public class LevelTransition : MonoBehaviour
             circleGO.transform.localScale = Vector3.one * s;
             yield return null;
         }
+
         circleGO.transform.localScale = Vector3.one * targetScale;
 
         ToNextLevel();
