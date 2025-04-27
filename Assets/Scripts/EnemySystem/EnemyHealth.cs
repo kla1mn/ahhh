@@ -1,28 +1,32 @@
+using TMPro;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 {
-    [Header("Health Settings")]
-    [SerializeField] private float maxHealth = 100f;
+    [Header("Health Settings")] [SerializeField]
+    private float maxHealth = 100f;
+
     private float currentHealth;
     [SerializeField] private float heartingTimer = 0.5f;
     private bool isHearting;
     private bool isDead;
 
-    [Header("Repulsion Settings")]
-    [SerializeField] private float repulsiveDuration = 0.3f;
+    [Header("Repulsion Settings")] [SerializeField]
+    private float repulsiveDuration = 0.3f;
+
     [SerializeField] private float repulsiveForce = 5f;
     private bool isRepulsing;
     private int direction;
 
-    [Header("Visual Settings")]
-    [SerializeField] private SpriteRenderer[] spriteRenderers;
+    [Header("Visual Settings")] [SerializeField]
+    private SpriteRenderer[] spriteRenderers;
+
     private readonly Color damageColor = Color.red;
     private readonly Color originalColor = Color.white;
     [SerializeField] private float flashSpeed = 10f;
 
-    [Header("Target Reference")]
-    [SerializeField] private Transform target; // ��������� ������ �� ����
+    [Header("Target Reference")] [SerializeField]
+    private Transform target; // ��������� ������ �� ����
 
 
     [SerializeField] private AudioSource damageSource;
@@ -31,18 +35,34 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
     private Rigidbody2D rb;
     private Vector2 acceptedRepulsiveVelocity;
     private Vector2 ownRepulsiveVelocity;
+    private TMP_Text healthText;
 
     public float MaxHealth => maxHealth;
     public float CurrentHealth => currentHealth;
     public float HeartingTimer => heartingTimer;
     public bool IsHearting => isHearting;
-    public bool IsDead { get => isDead; set => isDead = value; }
 
-    public Vector2 AcceptedRepulciveVelocity { get => acceptedRepulsiveVelocity; set => acceptedRepulsiveVelocity = value; }
+    public bool IsDead
+    {
+        get => isDead;
+        set => isDead = value;
+    }
+
+    public Vector2 AcceptedRepulciveVelocity
+    {
+        get => acceptedRepulsiveVelocity;
+        set => acceptedRepulsiveVelocity = value;
+    }
+
     public Vector2 OwnRepulciveVelocity => ownRepulsiveVelocity;
     public bool IsRepulsing => isRepulsing;
     public float RepulsiveDuration => repulsiveDuration;
-    public int Direction { get => direction; set => direction = value; }
+
+    public int Direction
+    {
+        get => direction;
+        set => direction = value;
+    }
 
     private void Awake()
     {
@@ -56,7 +76,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
         if (target == null)
         {
             var player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null) target = player.transform;
+            if (player != null)
+                target = player.transform;
         }
 
         // ������������� ������� ��������� ���� �� ������
@@ -64,12 +85,15 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
         {
             spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         }
+
+        healthText = GetComponentInChildren<TMP_Text>();
     }
 
     // ���������� IDamageable.TakeDamage ��� ��������� ���������
     public void TakeDamage(float damageAmount)
     {
-        if (IsDead || IsHearting) return;
+        if (IsDead || IsHearting)
+            return;
 
         currentHealth -= damageAmount;
 
@@ -112,7 +136,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
             }
         }
 
-        transform.position = new Vector3 (transform.position.x, transform.position.y, -2);
+        transform.position = new Vector3(transform.position.x, transform.position.y, -2);
 
         deadSource.Play();
 
@@ -121,7 +145,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 
     public void Hearting()
     {
-        if (!isHearting) return;
+        if (!isHearting)
+            return;
 
         float lerpValue = Mathf.PingPong(Time.time * flashSpeed, 1);
         Color currentColor = Color.Lerp(originalColor, damageColor, lerpValue);
@@ -164,9 +189,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 
     public void MakeRepulsion()
     {
-        if (!isRepulsing) return;
+        if (!isRepulsing)
+            return;
         rb.linearVelocity = ownRepulsiveVelocity;
-
     }
 
     public void StopRepulsing()
@@ -177,9 +202,18 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 
     private void Update()
     {
-        if (IsHearting) Hearting();
-        if (IsRepulsing) MakeRepulsion();
+        if (IsHearting)
+            Hearting();
+        if (IsRepulsing)
+            MakeRepulsion();
+        UpdateHealthUI();
     }
 
-
+    private void UpdateHealthUI()
+    {
+        if (healthText != null)
+            healthText.text = $"{currentHealth:0}/{maxHealth:0}";
+        else
+            Debug.Log("Health Text is null");
+    }
 }
