@@ -479,7 +479,7 @@ MonoBehaviour:
   target: {fileID: 0}
   visualPart: {fileID: 6900663733646265763}
   rotationSmoothness: 5
-  isActive: 1
+  isActive: 0
 --- !u!114 &2545143655952833380
 MonoBehaviour:
   m_ObjectHideFlags: 0

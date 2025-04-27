@@ -8,7 +8,7 @@ public class EnemyDetectionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("PlayerRb"))
         {
             ActivateEnemies();
         }
@@ -25,5 +25,7 @@ public class EnemyDetectionZone : MonoBehaviour
         {
             if (enemy != null) enemy.SetActive(true);
         }
+
+        Destroy(gameObject);
     }
 }
