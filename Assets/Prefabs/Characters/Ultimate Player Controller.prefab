@@ -3086,6 +3086,7 @@ GameObject:
   - component: {fileID: 4255723093773472956}
   - component: {fileID: 7093640090457453582}
   - component: {fileID: 6507999183728084325}
+  - component: {fileID: 6118740577566929262}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3195,6 +3196,7 @@ MonoBehaviour:
   jumpParent: {fileID: 7092037981581528131}
   jumpTrail: {fileID: 6154282023079353407}
   jumpSource: {fileID: 5824578275617420679}
+  reverseInputEvents: {fileID: 6118740577566929262}
 --- !u!114 &569724200515417801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,6 +3226,7 @@ MonoBehaviour:
   fistAttackAudio: {fileID: 4804919790769766894}
   damage: 22
   repulsive: {x: 5, y: 6}
+  ReverseInputEvents: {fileID: 6118740577566929262}
   UnlockDuration: 0.25
 --- !u!114 &8440639952187904323
 MonoBehaviour:
@@ -3373,6 +3376,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6118740577566929262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206232486495309860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a6f9abfec9ec34a957a716d88458fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsReverse: 0
 --- !u!1 &3277813595086205802
 GameObject:
   m_ObjectHideFlags: 0
