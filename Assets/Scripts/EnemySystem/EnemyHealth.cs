@@ -24,6 +24,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
     [Header("Target Reference")]
     [SerializeField] private Transform target; // ��������� ������ �� ����
 
+
+    [SerializeField] private AudioSource damageSource;
+    [SerializeField] private AudioSource deadSource;
+
     private Rigidbody2D rb;
     private Vector2 acceptedRepulsiveVelocity;
     private Vector2 ownRepulsiveVelocity;
@@ -82,6 +86,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
         StartHearting();
         StartRepulse();
 
+        damageSource.Play();
+
         if (currentHealth <= 0)
         {
             Die();
@@ -107,6 +113,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
         }
 
         transform.position = new Vector3 (transform.position.x, transform.position.y, -2);
+
+        deadSource.Play();
 
         Destroy(gameObject, 2f);
     }
