@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   visualPart: {fileID: 4687958992718663557}
-  isActive: 0
+  isActive: 1
 --- !u!114 &1027490217752760088
 MonoBehaviour:
   m_ObjectHideFlags: 0
