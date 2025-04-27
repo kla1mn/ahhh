@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6919956028237275714}
   - component: {fileID: 6919956028237275715}
   - component: {fileID: 5921127677269140893}
+  - component: {fileID: 6118937793705623523}
   m_Layer: 15
   m_Name: "\u041C\u042B\u041B\u041E"
   m_TagString: DestrObj
@@ -164,6 +165,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6118937793705623523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919956028237275713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2424e3f8ad63d42915995a85352395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 35
+  deadPart: {fileID: 6919956029348791401}
+  damageParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
+  shakeDuration: 0
+  shakeMagnitude: 0.125
+  dampingSpeed: 0.5
+  damageAudio: {fileID: 6919956028269015669}
+  deathAudio: {fileID: 6919956028269015669}
+  forceX: 0
+  forceY: 0
 --- !u!1 &6919956028269015658
 GameObject:
   m_ObjectHideFlags: 0

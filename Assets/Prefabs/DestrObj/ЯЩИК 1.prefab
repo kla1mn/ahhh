@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6919956028237275725}
   - component: {fileID: 6919956028237275714}
   - component: {fileID: 6919956028237275715}
+  - component: {fileID: 523755327419857799}
   m_Layer: 15
   m_Name: "\u042F\u0429\u0418\u041A 1"
   m_TagString: DestrObj
@@ -136,6 +137,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6807518, y: 1.6059897}
   m_EdgeRadius: 0
+--- !u!114 &523755327419857799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919956028237275713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904c4bf86da86fc44948290e6d486994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 12
+  deadPart: {fileID: 6919956029348791401}
+  damageParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  shakeDuration: 0
+  shakeMagnitude: 0.125
+  dampingSpeed: 0.5
+  damageAudio: {fileID: 6919956028269015669}
+  deathAudio: {fileID: 6919956028269015669}
 --- !u!1 &6919956028269015658
 GameObject:
   m_ObjectHideFlags: 0
