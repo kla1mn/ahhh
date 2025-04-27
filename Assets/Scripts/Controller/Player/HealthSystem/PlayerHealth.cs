@@ -6,8 +6,8 @@ using Random = System.Random;
 
 public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
 {
-    public float MaxHealth { get; set; } = 150f;
-    public float CurrentHealth { get; set; } = 150f;
+    public float MaxHealth { get; set; } = 250f;
+    public float CurrentHealth { get; set; } = 250f;
     public float HeartingDuration { get; set; } = .6f;
     public float HeartingTimer { get; set; }    
     public bool IsHearting { get; set; }
