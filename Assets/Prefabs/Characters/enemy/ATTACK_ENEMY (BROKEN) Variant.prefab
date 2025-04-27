@@ -425,6 +425,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262018625244974024, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 328dffee152474c4ba216dc74e602285, type: 3}
+    - target: {fileID: 262018625244974024, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 328dffee152474c4ba216dc74e602285, type: 3}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: maxHealth
       value: 200

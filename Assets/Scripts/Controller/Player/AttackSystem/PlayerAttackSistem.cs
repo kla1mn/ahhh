@@ -67,6 +67,8 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
             comboWaitTimer = 0;
 
             playerState.AttackDisableActions();
+
+            
         }
     }
 
