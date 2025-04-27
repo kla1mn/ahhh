@@ -3324,7 +3324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fistAttackAudio: {fileID: 4804919790769766894}
-  damage: 22
+  damage: 44
   repulsive: {x: 5, y: 6}
   UnlockDuration: 0.25
 --- !u!114 &8440639952187904323
@@ -3371,7 +3371,6 @@ MonoBehaviour:
   audioSource: {fileID: 6507999183728084325}
   attackSounds:
   - {fileID: 8300000, guid: 1a391e29286cd75488adfb53c4cccc1d, type: 3}
-  - {fileID: 8300000, guid: 512476159d00ca449951c8d362351e67, type: 3}
   - {fileID: 8300000, guid: 095fd02b4f0f0b345b7fe6fcfaafe991, type: 3}
   painSounds:
   - {fileID: 8300000, guid: 14408b5942d083746b4b0e32343953ea, type: 3}
@@ -20233,11 +20232,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.249527
+      value: 6.4361153
       objectReference: {fileID: 0}
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1904798
+      value: -2.7708068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.060124
       objectReference: {fileID: 0}
     - target: {fileID: 4388297117307267025, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_Name

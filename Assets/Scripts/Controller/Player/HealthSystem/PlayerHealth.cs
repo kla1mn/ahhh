@@ -18,9 +18,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     public Rigidbody2D Rb { get; set; }
     public float RepulsiveDuration { get; set; } = .2f;
     public int Direction { get; set; }
-    public Vector2 AcceptedRepulciveVelocity { get; set; } = new Vector2 (6, 6.5f);
+    public Vector2 AcceptedRepulciveVelocity { get; set; } = new Vector2 (12, 13f);
 
-    public Vector2 OwnRepulciveVelocity { get; set; } = new Vector2(6, 6.5f);
+    public Vector2 OwnRepulciveVelocity { get; set; } = new Vector2(12, 13f);
 
     private readonly Random rnd = new();
 

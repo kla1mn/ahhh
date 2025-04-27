@@ -11,6 +11,7 @@ public class PlayerVoices : MonoBehaviour
     private bool wasAttacking = false;
     private bool wasHearting = false;
     private bool wasJumping = false;
+    private const int SoundEffectChance = 15;
 
     void Update()
     {
@@ -73,7 +74,7 @@ public class PlayerVoices : MonoBehaviour
     {
         int randomValue = UnityEngine.Random.Range(0, 100); // Случайное число от 0 до 99
 
-        if (randomValue < 33) // 33% шанс
+        if (randomValue < SoundEffectChance)
         {
             if (clips != null && clips.Length > 0 && audioSource != null)
             {
