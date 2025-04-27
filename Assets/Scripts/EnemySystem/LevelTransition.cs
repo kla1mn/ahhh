@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Level : MonoBehaviour
+public class LevelTransition : MonoBehaviour
 {
     [Header("Спрайт круга")]
     public Sprite circleSprite;
