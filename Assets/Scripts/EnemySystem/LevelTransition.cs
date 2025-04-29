@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,8 +14,13 @@ public class LevelTransition : MonoBehaviour
 
     [SerializeField] 
     public EnemyHealth enemyHealth;
+
+    [SerializeField] private PlayerHealth playerHealth;
     
     private bool isFading;
+
+    private bool isNext;
+    public int nextId;
 
     void Update()
     {
@@ -22,9 +28,19 @@ public class LevelTransition : MonoBehaviour
             return;
 
         if (enemyHealth.IsDead)
+        {
+            isNext = true;
             StartCoroutine(FadeAndNext());
+
+        }
+        if (playerHealth.IsDead)
+        {
+            StartCoroutine(FadeAndNext());
+
+        }
     }
 
+    [Obsolete]
     private IEnumerator FadeAndNext()
     {
         isFading = true;
@@ -69,15 +85,17 @@ public class LevelTransition : MonoBehaviour
         }
         circleGO.transform.localScale = Vector3.one * targetScale;
 
-        ToNextLevel();
+        if (isNext) ToNextLevel();
+        else ToMainMenu();
     }
 
-    private static void ToNextLevel()
+    private void ToMainMenu()
     {
-        var nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
-        var sceneCount = SceneManager.sceneCountInBuildSettings;
-        if (nextLevel >= sceneCount)
-            Debug.Log("Is already last level. Go to Menu");
-        SceneManager.LoadScene(nextLevel % sceneCount);
+        SceneLoader.LoadScene(0);
+    }
+
+    private void ToNextLevel()
+    {
+        SceneLoader.LoadScene(nextId);
     }
 }

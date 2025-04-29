@@ -434,12 +434,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 328dffee152474c4ba216dc74e602285, type: 3}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: isTaran
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: maxHealth
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: heartingTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: repulsiveForce
-      value: 8
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: repulsiveDuration
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1027490217752760088, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: spriteRenderers.Array.size
@@ -557,9 +569,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: ATTACK_ENEMY (BROKEN) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1799040435994531270, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4628526
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799040435994531270, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Size.y
+      value: 0.89519995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799040435994531270, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0073394827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799040435994531270, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.41368482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799040435994531270, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075961389021911666, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_GravityScale
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3237640266392040021, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237640266392040021, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: rotationDelay
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237640266392040021, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: rotationSmoothTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401678834181490461, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401678834181490461, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401678834181490461, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401678834181490461, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401678834181490461, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6547576541179573284, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
       propertyPath: m_Animation
@@ -585,6 +649,26 @@ PrefabInstance:
       propertyPath: bossEnemy
       value: 
       objectReference: {fileID: 8964038789147726174}
+    - target: {fileID: 8987566397361732913, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: damage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987566397361732913, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: isVamp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987566397361732913, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: vampirismFloat
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987566397361732913, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: repulsionVelocity.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987566397361732913, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}
+      propertyPath: repulsionVelocity.y
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3759405986153980054, guid: ff028ea5b0ccda84dbe5aae2745e0044, type: 3}

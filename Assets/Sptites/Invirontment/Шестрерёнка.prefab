@@ -434,8 +434,8 @@ GameObject:
   - component: {fileID: 7571377920054988082}
   - component: {fileID: 7571377920054988081}
   - component: {fileID: 7571377920054988095}
-  - component: {fileID: 7875314535334332399}
   - component: {fileID: 6535389770467722377}
+  - component: {fileID: 5579806936929604005}
   m_Layer: 15
   m_Name: "\u0428\u0435\u0441\u0442\u0440\u0435\u0440\u0451\u043D\u043A\u0430"
   m_TagString: Dinamic
@@ -543,28 +543,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7875314535334332399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7571377920054988094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c2424e3f8ad63d42915995a85352395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 70000
-  deadPart: {fileID: 6685580866265500747}
-  damageParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
-  shakeDuration: 0
-  shakeMagnitude: 0.125
-  dampingSpeed: 0.5
-  damageAudio: {fileID: 4948491661940378999}
-  deathAudio: {fileID: 5480991552690536747}
-  forceX: 11
-  forceY: 11
 --- !u!58 &6535389770467722377
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -601,6 +579,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.028543472, y: 0}
   m_Radius: 1.4910736
+--- !u!114 &5579806936929604005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571377920054988094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7717710119a5440ad05a803951f4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200000
+  deadPart: {fileID: 6685580866265500747}
+  damageParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
+  shakeDuration: 0
+  shakeMagnitude: 0.125
+  dampingSpeed: 0.5
+  damageAudio: {fileID: 4948491661940378999}
+  deathAudio: {fileID: 5480991552690536747}
+  forceX: 14
+  forceY: 11
 --- !u!1 &8838392747845741596
 GameObject:
   m_ObjectHideFlags: 0

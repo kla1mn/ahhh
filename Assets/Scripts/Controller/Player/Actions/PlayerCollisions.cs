@@ -8,7 +8,7 @@ public class PlayerCollisions : MonoBehaviour
     private const float CircleCheckRadius = .15f;
     private const float RayLength = .9f;
     private const float RayLenghtDown = .32f;
-    private const float stunningVelocityY = -28f;
+    private const float stunningVelocityY = -228f;
     private const float stunningDuration = 1.2f;
 
     [SerializeField, HideInInspector] private Transform groundCheck;
@@ -61,7 +61,6 @@ public class PlayerCollisions : MonoBehaviour
         CheckGroundCollision();
         CheckWallCollision();
 
-        LayingOnGround();
     }
 
     private void LayingOnGround()

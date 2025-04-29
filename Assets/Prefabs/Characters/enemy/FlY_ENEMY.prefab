@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1013605738401523538}
   - component: {fileID: 4272796761341114991}
   - component: {fileID: 2545143655952833380}
-  - component: {fileID: 4669971314708948511}
+  - component: {fileID: 1442690261476947144}
   m_Layer: 7
   m_Name: 'EnemyCollider '
   m_TagString: Enemy
@@ -288,7 +288,7 @@ MonoBehaviour:
   target: {fileID: 0}
   damageSource: {fileID: 3556462010207986149}
   deadSource: {fileID: 7431778195603876278}
---- !u!114 &4669971314708948511
+--- !u!114 &1442690261476947144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,13 +297,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023051327430694535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb26802d80a0af45aeedd6fe2c84b54, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ed56eaecdaafe84cad3b9f450faf9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 12
   hertableObjects:
     serializedVersion: 2
     m_Bits: 1048576
+  health: {fileID: 2545143655952833380}
+  isRep: 1
+  isVamp: 0
+  vampirismFloat: 0
 --- !u!1 &2838808598255782887
 GameObject:
   m_ObjectHideFlags: 0

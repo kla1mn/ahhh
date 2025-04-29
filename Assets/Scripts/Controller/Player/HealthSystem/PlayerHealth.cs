@@ -18,9 +18,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     public Rigidbody2D Rb { get; set; }
     public float RepulsiveDuration { get; set; } = .2f;
     public int Direction { get; set; }
-    public Vector2 AcceptedRepulciveVelocity { get; set; } = new Vector2 (8, 13f);
+    public Vector2 AcceptedRepulciveVelocity { get; set; } = new Vector2 (7f, 6f);
 
-    public Vector2 OwnRepulciveVelocity { get; set; } = new Vector2(8, 13f);
+    public Vector2 OwnRepulciveVelocity { get; set; } = new Vector2(7f, 6f);
 
     private readonly Random rnd = new();
 
@@ -41,11 +41,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     [SerializeField] private AudioSource deathSound;
     private TMP_Text healthText;
 
+
+    private CineMashineEffects effect;
+
+    private PlayerCollisions playerCollisions;
+
     private void Awake()
     {
-        
+        playerCollisions = GetComponentInParent<PlayerCollisions>();
         Rb = gameObject.GetComponent<Rigidbody2D>();
         healthText = GetComponentInChildren<TMP_Text>();
+
+        effect = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CineMashineEffects>();
     }
     void Update()
     {
@@ -85,7 +92,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
             state.HeartingDisable();
             StartRepulse();
 
-           // spawner.SpawnAllBloodPrefabs();
+            effect.StartDamageShake();
+
+
+            // spawner.SpawnAllBloodPrefabs();
             AudioPlay();
 
             if (CurrentHealth < 0)
@@ -134,7 +144,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IRepulsive
     {
         if (IsHearting && HeartingTimer < HeartingDuration)
             HeartingTimer += Time.deltaTime;
-        else if (IsHearting)
+        else if (IsHearting && playerCollisions.IsGrounded)
             StopHearting();
 
     }

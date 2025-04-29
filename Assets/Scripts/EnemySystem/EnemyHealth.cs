@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 {
+    [Header("Different States")]
+    [SerializeField] private bool isTaran;
+    [SerializeField] private bool noRepulse;
+
     [Header("Health Settings")] [SerializeField]
     private float maxHealth = 100f;
 
@@ -42,6 +46,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
     public float HeartingTimer => heartingTimer;
     public bool IsHearting => isHearting;
 
+    private float enableToHeartTimer = 0.2f;
+
+    private bool isDisableHearting;
+
+    private CineMashineEffects effect;
+
     public bool IsDead
     {
         get => isDead;
@@ -72,6 +82,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 
         currentHealth = maxHealth;
 
+
+        effect = GameObject.FindGameObjectWithTag("MainCamera").GetComponent< CineMashineEffects>();
+
         // ������������� ������� ���� ���� �� ������
         if (target == null)
         {
@@ -92,12 +105,25 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
     // ���������� IDamageable.TakeDamage ��� ��������� ���������
     public void TakeDamage(float damageAmount)
     {
-        if (IsDead || IsHearting)
+        if (IsDead || isDisableHearting)
             return;
 
-        currentHealth -= damageAmount;
 
-        // ���������� ����������� ����� ������������ ����
+        effect.StartAttackShake();
+        currentHealth -= damageAmount;
+        Invoke(nameof(EnableHearting), enableToHeartTimer);
+        isDisableHearting = true;
+
+        damageSource.Play();
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+
+        if (IsTaraning || isHearting)
+            return;
+
         if (target != null)
         {
             Direction = (int)Mathf.Sign(transform.position.x - target.position.x);
@@ -107,16 +133,18 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
             Direction = Random.value > 0.5f ? 1 : -1; // ���� ���� �� �������, ��������� �����������
         }
 
+        if (IsTaraning && damageAmount <= 0)
+            return;
+
         StartHearting();
+
         StartRepulse();
 
-        damageSource.Play();
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+       
     }
+
+
+    public bool IsTaraning =>  isTaran && (rb.linearVelocityX > 0 && transform.position.x < target.position.x || rb.linearVelocityX < 0 && transform.position.x > target.position.x);
 
     public void Die()
     {
@@ -140,7 +168,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
 
         deadSource.Play();
 
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 8f);
     }
 
     public void Hearting()
@@ -178,6 +206,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable, IRepulsive
             }
         }
     }
+
+    private void EnableHearting() => isDisableHearting = false;
 
     public void StartRepulse()
     {

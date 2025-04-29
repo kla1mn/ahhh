@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09122b8066766294ea732eac24710d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingVelocity: 13.7
+  jumpingVelocity: 23.5
   longerJumpingCoeffieicent: 0.9
   jumpParcticle: {fileID: 8961858063503482504, guid: ef63c4aa13c6d7d44bd87be414c7c980, type: 3}
   jumpParent: {fileID: 7092037981581528131}
@@ -3323,10 +3323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7481e9639a79a042bae8e2bb8560d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComboWaitDuration: 0.3
   fistAttackAudio: {fileID: 4804919790769766894}
   damage: 44
   repulsive: {x: 5, y: 6}
-  UnlockDuration: 0.25
+  UnlockDuration: 0.16
 --- !u!114 &8440639952187904323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10174,8 +10175,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 94ba6d1f390e8224c9331ff906b2b57b, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 06fc9b7c75d67c547a2f11e63fb4937d, type: 3}
-  m_Resource: {fileID: 8300000, guid: 06fc9b7c75d67c547a2f11e63fb4937d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f9aebeae29323374c8e2868013a16a12, type: 3}
+  m_Resource: {fileID: 8300000, guid: f9aebeae29323374c8e2868013a16a12, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11373,7 +11374,7 @@ Rigidbody2D:
   m_Mass: 80
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -20230,17 +20231,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5568663732813211677}
     m_Modifications:
+    - target: {fileID: 2558556025857399903, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
+      propertyPath: cameraPoint
+      value: 
+      objectReference: {fileID: 3174110329915384905}
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.4361153
+      value: 141.64069
       objectReference: {fileID: 0}
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7708068
+      value: 21.643288
       objectReference: {fileID: 0}
     - target: {fileID: 4130878514640962546, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.060124
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4388297117307267025, guid: a3235a9d0842eda47bbcebabd050a95a, type: 3}
       propertyPath: m_Name

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackSistem : MonoBehaviour, IJerker
 {
-    private const float ComboWaitDuration = .45f;
+    [SerializeField] private float ComboWaitDuration = .25f;
 
     [Header("Audio")]
     [SerializeField] private AudioSource fistAttackAudio;
@@ -25,7 +25,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     public bool IsComboWaiting { get; private set; }
     public int CurrentAttack { get; private set; }
 
-    public float CurrentDamage => damage;
+    public float CurrentDamage {get => damage; set => damage = value; }
 
     public Vector2 RepulsioonVelocity => repulsive;
 
@@ -39,6 +39,8 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
 
     public float StrongJerkForce => throw new NotImplementedException();
 
+    private Rigidbody2D rb;
+
     private void Awake()
     {
         inputManager = GameObject.FindGameObjectWithTag("InputManager").GetComponent<InputManager>();
@@ -46,6 +48,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
 
             inputManager.OnAttackStarted += StartAttack;
 
+        rb = GetComponentInChildren<Rigidbody2D>();
         
 
         playerState = GetComponent<PlayerState>();
@@ -68,7 +71,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
 
             playerState.AttackDisableActions();
 
-            
+            rb.linearVelocityY = 7f;
         }
     }
 
@@ -101,7 +104,6 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
     {
         IsAttacking = false;
 
-
         if (CurrentAttack < 3)
             StartComboWaiting();
         else
@@ -128,6 +130,7 @@ public class PlayerAttackSistem : MonoBehaviour, IJerker
         IsComboWaiting = false;
         CurrentAttack = 0;
         comboWaitTimer = 0;
+
         //StartCoolDownAfterAttack();
     }
 

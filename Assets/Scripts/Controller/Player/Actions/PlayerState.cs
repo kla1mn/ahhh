@@ -152,8 +152,6 @@ public class PlayerState : MonoBehaviour
     {
         AbleToFlip = false;
         AbleToSprint = false;
-        AbleToJump = false;
-        AbleToAirJump = false;
         AbleToWallJump = false;
         AbleToHangOnEdge = false;
         AbleToWallSlide = false;

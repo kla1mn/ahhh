@@ -7,7 +7,6 @@ public class HitZone : MonoBehaviour
     [SerializeField] protected float damage;
     [SerializeField] private LayerMask hertableObjects;
 
-
     protected virtual void OnCollisionStay2D(Collision2D collision)
     {
         var collisionObj = collision.gameObject;

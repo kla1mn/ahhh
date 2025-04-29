@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 3075961389021911666}
   - component: {fileID: 3237640266392040021}
   - component: {fileID: 1027490217752760088}
-  - component: {fileID: 6927384401990552546}
+  - component: {fileID: 8987566397361732913}
   m_Layer: 7
   m_Name: 'EnemyCollider '
   m_TagString: Enemy
@@ -591,8 +591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  rotationDelay: 1
+  brakingDistance: 1
   visualPart: {fileID: 4687958992718663557}
-  isActive: 0
 --- !u!114 &1027490217752760088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fef6e76a8371764c864b8535317de7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTaran: 0
+  noRepulse: 0
   maxHealth: 100
   heartingTimer: 0.5
   repulsiveDuration: 0.3
@@ -631,7 +634,7 @@ MonoBehaviour:
   target: {fileID: 0}
   damageSource: {fileID: 143846675746299226}
   deadSource: {fileID: 262018625244974024}
---- !u!114 &6927384401990552546
+--- !u!114 &8987566397361732913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -640,13 +643,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6257508392642926798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb26802d80a0af45aeedd6fe2c84b54, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ed56eaecdaafe84cad3b9f450faf9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
   hertableObjects:
     serializedVersion: 2
     m_Bits: 1048576
+  health: {fileID: 1027490217752760088}
+  repulsionVelocity: {x: 0, y: 0}
+  isRep: 1
+  isVamp: 0
+  vampirismFloat: 0
 --- !u!1 &7246770280168878930
 GameObject:
   m_ObjectHideFlags: 0

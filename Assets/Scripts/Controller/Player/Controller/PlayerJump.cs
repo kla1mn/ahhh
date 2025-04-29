@@ -39,9 +39,9 @@ public class PlayerJump : MonoBehaviour
         playerCollisions = GetComponent<PlayerCollisions>();
 
 
-            inputManager.OnJumpStarted += (snd, args) => jumpButtonIsPressed = true;
-            inputManager.OnJumpPerformed += Jump;
-            inputManager.OnJumpCanceled += (snd, args) => jumpButtonIsPressed = false;
+        inputManager.OnJumpStarted += (snd, args) => jumpButtonIsPressed = true;
+        inputManager.OnJumpPerformed += Jump;
+        inputManager.OnJumpCanceled += (snd, args) => jumpButtonIsPressed = false;
         
         
     }

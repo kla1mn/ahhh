@@ -27,8 +27,8 @@ public class CineMashineEffects : MonoBehaviour
     private float dialogueSpeed = 35f;
 
     [SerializeField] private float shakeDuration;
-    private float attackShakeMagnitude = 0.05f;
-    private float damageShakeMagnitude = 1;
+    private float attackShakeMagnitude = .15f;
+    private float damageShakeMagnitude = 1f;
     private float dampingSpeed = 0.5f;
 
     private float defaultConfiderMaxSize = 5f;
@@ -36,7 +36,8 @@ public class CineMashineEffects : MonoBehaviour
 
     Vector3 initialPosition;
 
-    private CinemachineVirtualCamera virtualCamera;
+
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
     [Header("Confider")]
     [SerializeField] private CinemachineConfiner2D confider;
@@ -46,6 +47,7 @@ public class CineMashineEffects : MonoBehaviour
     private void Awake()
     {
         desiredFOV = DefaultFOV;
+        virtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
     public float DesiredFOV
@@ -88,45 +90,9 @@ public class CineMashineEffects : MonoBehaviour
         SettingFOV();
 
         Shaking();
-
-        //SettingConfiderSize();
     }
     
-    private void SettingConfiderSize()
-    {
-        if (isOpeningInventory)
-            ConfiderResizing(true);
-        if (isClosingInventory)
-            ConfiderResizing(false);
-    }
 
-    private void ConfiderResizing(bool isIncreasing)
-    {
-        var confiderWindowSize = confider.m_MaxWindowSize;
-        var necessarySize = isIncreasing ? largeConfiderMaxSize : defaultConfiderMaxSize;
-
-        confiderWindowSize += Time.unscaledDeltaTime * confiderResizingSpeed * (isIncreasing ? -1 : 1);
-        confider.m_MaxWindowSize = confiderWindowSize;
-
-        if (Math.Abs(confiderWindowSize - necessarySize) < .1f)
-        {
-            if (isIncreasing)
-            {
-                isOpeningInventory = false;
-                Time.timeScale = 0;
-            }
-            else 
-                isClosingInventory = false;
-
-            confider.m_MaxWindowSize = necessarySize;
-
-
-             
-        }
-            
-    }
-    
-    
 
     private void Shaking()
     {
@@ -140,27 +106,39 @@ public class CineMashineEffects : MonoBehaviour
             isAttackShaking = false;
         }
 
-        if (isAttackShaking && shakeDuration > 0f)
+        if (isDamageShaking && shakeDuration > 0f)
             Shake(damageShakeMagnitude);
-        else if (isAttackShaking)
+        else if (isDamageShaking)
         {
             StopShake();
             isDamageShaking = false;
+        }
+
+
+        if (!isAttackShaking && !isDamageShaking && virtualCamera.Follow == null)
+        {
+            virtualCamera.Follow = cameraPoint;
+
         }
     }
 
     private void Shake(System.Single magnitude)
     {
-        transform.localPosition = initialPosition + UnityEngine.Random.insideUnitSphere*attackShakeMagnitude;
+        transform.localPosition = initialPosition + UnityEngine.Random.insideUnitSphere* (isDamageShaking ? damageShakeMagnitude : attackShakeMagnitude);
 
         shakeDuration -= Time.unscaledDeltaTime * dampingSpeed;
     }
     private void StopShake()
     {
+        Debug.Log("222222");
+
         shakeDuration = 0f;
         transform.localPosition = initialPosition;
 
         virtualCamera.Follow = cameraPoint;
+
+        Debug.Log("33333");
+
     }
 
 
@@ -206,7 +184,7 @@ public class CineMashineEffects : MonoBehaviour
         if (!isDamageShaking)
         {
             isAttackShaking = true;
-            shakeDuration = 0.1f;
+            shakeDuration = 0.05f;
 
             virtualCamera.Follow = null;
 
@@ -219,9 +197,10 @@ public class CineMashineEffects : MonoBehaviour
         isAttackShaking = false;
 
         isDamageShaking = true;
-        shakeDuration = 0.45f;
+        shakeDuration = .15f;
 
         virtualCamera.Follow = null;
+
 
         initialPosition = transform.localPosition;
     }

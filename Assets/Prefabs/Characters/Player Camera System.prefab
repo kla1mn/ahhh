@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 9143519470284678412}
   m_Layer: 14
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 2240307939896286413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9099928, y: 0.86309004, z: -10}
+  m_LocalPosition: {x: 141.64069, y: 21.643288, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -150,7 +150,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 45
   orthographic: 0
   orthographic size: 1.3422291
   m_Depth: -1
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 202776237306087844}
   m_Layer: 0
   m_Name: Virtual Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,13 +471,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10900e5babcd62459a3db13a00a04ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultFOV: 58
-  SlideFOV: 63
+  DefaultFOV: 44
+  SlideFOV: 55
   InventoryFOV: 16
   DialogueFOV: 50
   DeathOrCampFOV: 35
   SimpleDialogueFOV: 42
   shakeDuration: 0
+  virtualCamera: {fileID: 0}
   confider: {fileID: 8126475917622995973}
   cameraPoint: {fileID: 0}
 --- !u!114 &202776237306087844
@@ -492,15 +493,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b879742684d8242bae93e974c00055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasObj: {fileID: 0}
-  isDepthOpen: 0
-  isDepthClosed: 0
-  isColorExposuringUp: 0
-  isColorExposuringDown: 0
-  vignetteAnimationSpeed: 0.4
-  depthStartValue: 1
-  depthEndValue: 35
-  depthIntencivity: 0
-  depthAnimationSpeed: 500
-  exposureSpeed: 10
-  contrastSpeed: 300

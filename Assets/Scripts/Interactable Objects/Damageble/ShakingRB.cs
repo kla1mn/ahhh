@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShakingRB : ShakingObject, IRepulsive
 {
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     [SerializeField] private float forceX;
     [SerializeField] private float forceY;
@@ -36,7 +36,7 @@ public class ShakingRB : ShakingObject, IRepulsive
         StartRepulse();
     }
 
-    public void MakeRepulsion()
+    public virtual void MakeRepulsion()
     {
         if (IsRepulsing)
         {

@@ -57,24 +57,24 @@ public class PlayerVoices : MonoBehaviour
 
     private void PlayRandomAttackSound()
     {
-        PlayRandomEffect(attackSounds);
+        PlayRandomEffect(attackSounds, 5);
     }
 
     private void PlayRandomPainEffect()
     {
-        PlayRandomEffect(painSounds);
+        PlayRandomEffect(painSounds, 40);
     }
 
     private void PlayRandomJumpEffect()
     {
-        PlayRandomEffect(jumpSounds);
+        PlayRandomEffect(jumpSounds, 3);
     }
 
-    private void PlayRandomEffect(AudioClip[] clips)
+    private void PlayRandomEffect(AudioClip[] clips, int chance)
     {
         int randomValue = UnityEngine.Random.Range(0, 100); // Случайное число от 0 до 99
 
-        if (randomValue < SoundEffectChance)
+        if (randomValue < chance)
         {
             if (clips != null && clips.Length > 0 && audioSource != null)
             {

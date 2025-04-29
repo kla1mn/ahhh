@@ -39,7 +39,7 @@ public class PlayerFlip : MonoBehaviour
     {
         var horizontal = inputManager.GetPlayerMovementVector().x;
         if (((IsFacingRight && horizontal < 0f || !IsFacingRight && horizontal > 0f) && !playerState.IsSliding
-             && !playerState.IsDashing && playerState.AbleToFlip 
+             && !playerState.IsDashing && playerState.AbleToFlip && !playerState.IsHearting
              && !IsFliping || playerState.NeedToFlip && !IsFliping && playerState.AbleToFlip))
         {
             playerState.NeedToFlip = false;
