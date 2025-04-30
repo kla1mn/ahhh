@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Windows
+  m_Name: MAC
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
-  m_BuildTarget: 19
+  m_BuildTarget: 2
   m_Subtarget: 2
-  m_PlatformId: 4e3c793746204150860bf175a9a41a05
+  m_PlatformId: 0d2129357eac403d8b359c2dcbf82502
   m_PlatformBuildProfile:
-    rid: 2904841062832668853
+    rid: 2904841146576928770
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
@@ -42,8 +42,8 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: DefaultCompany'
-    - line: '|   productName: ahhh'
+    - line: '|   companyName: ahh'
+    - line: '|   productName: Pereformatator'
     - line: '|   defaultCursor: {fileID: 2800000, guid: a57aa6d8547ee4e48896882fbaebe6cb,
         type: 3}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
@@ -54,7 +54,7 @@ MonoBehaviour:
     - line: '|   m_SplashScreenOverlayOpacity: 1'
     - line: '|   m_SplashScreenAnimation: 1'
     - line: '|   m_SplashScreenLogoStyle: 1'
-    - line: '|   m_SplashScreenDrawMode: 0'
+    - line: '|   m_SplashScreenDrawMode: 1'
     - line: '|   m_SplashScreenBackgroundAnimationZoom: 1'
     - line: '|   m_SplashScreenLogoAnimationZoom: 1'
     - line: '|   m_SplashScreenBackgroundLandscapeAspect: 1'
@@ -64,7 +64,7 @@ MonoBehaviour:
     - line: '|     x: 0'
     - line: '|     y: 0'
     - line: '|     width: 1'
-    - line: '|     height: 1'
+    - line: '|     height: 0.99999994'
     - line: '|   m_SplashScreenBackgroundPortraitUvs:'
     - line: '|     serializedVersion: 2'
     - line: '|     x: 0'
@@ -74,7 +74,7 @@ MonoBehaviour:
     - line: '|   m_SplashScreenLogos:'
     - line: '|   - logo: {fileID: -6465988659293717697, guid: e7920e8e59c6a744691eaf438851db70,
         type: 3}'
-    - line: '|     duration: 3.9'
+    - line: '|     duration: 3.02'
     - line: '|   m_VirtualRealitySplashScreen: {fileID: 2800000, guid: a0aa3686fc3b51f489256c57f93d7467,
         type: 3}'
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
@@ -630,7 +630,7 @@ MonoBehaviour:
     - line: '|   splashScreenBackgroundSourceLandscape: {fileID: -5452278321736067650,
         guid: a0aa3686fc3b51f489256c57f93d7467, type: 3}'
     - line: '|   splashScreenBackgroundSourcePortrait: {instanceID: 0}'
-    - line: '|   blurSplashScreenBackground: 1'
+    - line: '|   blurSplashScreenBackground: 0'
     - line: '|   spritePackerPolicy: '
     - line: '|   webGLMemorySize: 32'
     - line: '|   webGLExceptionSupport: 1'
@@ -792,8 +792,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2904841062832668853
-      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
+    - rid: 2904841146576928770
+      type: {class: OSXStandaloneBuildProfile, ns: UnityEditor.OSXStandalone, asm: UnityEditor.OSXStandalone.Extensions}
       data:
         m_Development: 0
         m_ConnectProfiler: 0
@@ -806,9 +806,6 @@ MonoBehaviour:
         m_ExplicitArrayBoundsChecks: 0
         m_CompressionType: 0
         m_InstallInBuildFolder: 0
-        m_WindowsBuildAndRunDeployTarget: 0
-        m_Architecture: 0
-        m_CreateSolution: 0
-        m_CopyPDBFiles: 0
-        m_WindowsDevicePortalAddress: 
-        m_WindowsDevicePortalUsername: 
+        m_MacOSXcodeBuildConfig: 1
+        m_Architecture: 1
+        m_CreateXcodeProject: 0
